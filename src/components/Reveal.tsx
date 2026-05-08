@@ -1,0 +1,54 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
+type RevealProps = {
+  children: React.ReactNode;
+  delay?: number;
+  className?: string;
+};
+
+export function Reveal({ children, delay = 0, className = "" }: RevealProps) {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setVisible(true);
+            observer.disconnect();
+            break;
+          }
+        }
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -10% 0px" },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      style={{
+        transitionDelay: `${delay}ms`,
+        transitionDuration: "3200ms",
+        transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
+        transitionProperty: "opacity, transform, filter",
+      }}
+      className={`motion-reduce:!transition-none motion-reduce:!opacity-100 motion-reduce:!translate-y-0 motion-reduce:!blur-0 ${className} ${
+        visible
+          ? "opacity-100 translate-y-0 blur-0"
+          : "opacity-0 translate-y-8 blur-[3px]"
+      }`}
+    >
+      {children}
+    </div>
+  );
+}
