@@ -25,7 +25,7 @@ export default function Home() {
         <header className="flex flex-col items-center text-center">
           <div className="relative h-28 w-28 overflow-hidden rounded-full ring-1 ring-neutral-300/60 sm:h-32 sm:w-32">
             <Image
-              src="/ryu_avatar_v2.jpg"
+              src="/ryu_avatar_v3.jpg"
               alt="Ryu Yamaki"
               fill
               sizes="128px"
