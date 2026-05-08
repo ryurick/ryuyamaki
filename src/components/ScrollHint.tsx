@@ -4,7 +4,7 @@ export function ScrollHint() {
   const handleClick = () => {
     if (typeof window === "undefined") return;
     window.scrollTo({
-      top: window.innerHeight * 0.95,
+      top: window.innerHeight * 1.25,
       behavior: "smooth",
     });
   };
