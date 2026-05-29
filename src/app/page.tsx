@@ -43,28 +43,26 @@ export default function Home() {
 
       <section className="mt-32 space-y-12 text-center text-[15px] leading-[2] text-neutral-700 sm:mt-40 sm:text-base">
         <Reveal>
-          <p>ソフトウェアをつくり、音楽を奏でています。</p>
+          <p>ソフトウェアを作り、音楽をしています。</p>
         </Reveal>
 
         <Reveal delay={150}>
           <p>
-            いまは東京を拠点にしています。
+            東京に住んでいます。
             <br />
-            AI、ピアノ、人が集まる場所、そして
+            AIやピアノ、人が集まる場所が
             <br />
-            誰かを少し孤独でなくするための
-            <br />
-            道具に興味があります。
+            好きです。
           </p>
         </Reveal>
 
         <Reveal delay={300}>
           <p>
-            ソフトウェアエンジニアとして11年。
+            エンジニアを11年。
             <br />
-            最近はAIを仕事や暮らしに馴染ませる
+            最近はAIを使ったものも
             <br />
-            小さな試みを続けています。
+            いくつか作っています。
           </p>
         </Reveal>
       </section>
@@ -75,6 +73,48 @@ export default function Home() {
             WORKS
           </h2>
           <ul className="flex max-w-[420px] flex-col gap-8 text-[15px] leading-[2] text-neutral-700 sm:text-base">
+            <li>
+              <p className="font-medium tracking-tight text-neutral-900">
+                Engineering
+              </p>
+              <p className="mt-1 text-neutral-600">
+                金融・教育・航空などのプロダクト開発に、業務委託として関わっています。
+              </p>
+            </li>
+            <li>
+              <p className="font-medium tracking-tight text-neutral-900">
+                Asatto
+              </p>
+              <p className="mt-1 text-neutral-600">
+                明日の朝、三つだけ。寝る前に書くと、朝の通知とロック画面に届く iOS アプリ。
+              </p>
+            </li>
+            <li>
+              <a
+                href="https://otonnect.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium tracking-tight text-neutral-900 underline decoration-neutral-300 underline-offset-4 transition-colors hover:decoration-neutral-700"
+              >
+                Otonnect
+              </a>
+              <p className="mt-1 text-neutral-600">
+                曲を送ると、誰かから曲が届く。匿名で音楽を交換する Web アプリ。
+              </p>
+            </li>
+            <li>
+              <a
+                href="https://wanawana.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium tracking-tight text-neutral-900 underline decoration-neutral-300 underline-offset-4 transition-colors hover:decoration-neutral-700"
+              >
+                wanawana
+              </a>
+              <p className="mt-1 text-neutral-600">
+                やりたいことを書いて、友達と応援しあう。願いの共有アプリ。
+              </p>
+            </li>
             <li>
               <a
                 href="https://helensmatch.vercel.app/"
@@ -98,15 +138,7 @@ export default function Home() {
                 Helen&rsquo;s PetBed
               </a>
               <p className="mt-1 text-neutral-600">
-                家族で営むペット用品のブランド。Webまわりの相談に乗っています。
-              </p>
-            </li>
-            <li>
-              <p className="font-medium tracking-tight text-neutral-900">
-                業務委託
-              </p>
-              <p className="mt-1 text-neutral-600">
-                大手カード会社や航空会社、学習サービスなどのWebアプリ開発に参画しています。
+                家族で営むペット用品のブランド。主にITまわりを担っています。
               </p>
             </li>
           </ul>
@@ -168,13 +200,11 @@ export default function Home() {
 
         <Reveal delay={150}>
           <p>
-            Currently based in Tokyo.
+            Based in Tokyo.
             <br />
-            Interested in AI, piano, social spaces,
+            I like AI, piano,
             <br />
-            and tools that make people feel
-            <br />
-            a little less alone.
+            and places where people gather.
           </p>
         </Reveal>
 
@@ -182,9 +212,9 @@ export default function Home() {
           <p>
             A software engineer for 11 years.
             <br />
-            Lately, quietly weaving AI into
+            Lately, also building
             <br />
-            work and everyday life.
+            things with AI.
           </p>
         </Reveal>
       </section>
