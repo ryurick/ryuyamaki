@@ -32,10 +32,7 @@ export default function Home() {
               className="object-cover"
             />
           </div>
-          <p className="mt-8 text-[15px] tracking-[0.3em] text-neutral-500 sm:text-base">
-            八巻 竜
-          </p>
-          <h1 className="mt-3 text-3xl font-light tracking-tight sm:text-4xl">
+          <h1 className="mt-8 text-3xl font-light tracking-tight sm:text-4xl">
             Ryu Yamaki
           </h1>
         </header>
