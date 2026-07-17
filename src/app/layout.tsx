@@ -14,6 +14,10 @@ export const metadata: Metadata = {
   title: "Ryu Yamaki",
   description:
     "I build software, play music, and spend a lot of time thinking about people, cities, and the internet.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({
