@@ -15,7 +15,7 @@ import {
 } from "@/content/ai";
 
 export const metadata: Metadata = {
-  title: "Ryu Yamaki｜小さな会社のAI活用支援",
+  title: "中小会社・個人事業主のAI/IT活用支援",
   description:
     "小さな会社や個人事業主の面倒な作業を、AIで減らします。まず30分の無料診断から。",
   robots: {
