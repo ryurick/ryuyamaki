@@ -1,9 +1,8 @@
 // /ai ページの文言・URL・価格の定数。差し替えはこのファイルだけで完結させる。
 
-// TODO: 予約ページが決まったらURLを差し替える
-export const CONTACT_URL = `mailto:ryu8mk@gmail.com?subject=${encodeURIComponent(
-  "無料30分診断の予約",
-)}`;
+// Googleカレンダーの予約スケジュール「無料30分診断」
+export const CONTACT_URL =
+  "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0youoDUYHFe4Ys9egJNRJeErEbeR-dIXvKXVkoKqEjaIEbwqL-Y_yXBxCGfxphOPwcTNJsz27H";
 
 export const NAV = [
   { label: "サービス", href: "#service" },

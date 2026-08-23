@@ -268,6 +268,8 @@ export default function AiPage() {
           </p>
           <a
             href={CONTACT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-8 inline-block rounded-md bg-[#0F6E66] px-12 py-3.5 font-medium text-white transition-colors hover:bg-[#0c5a54]"
           >
             {CONTACT.button}
