@@ -4,6 +4,7 @@ import Link from "next/link";
 import {
   CAREER,
   CASES,
+  CASES_EXTRA,
   CONTACT,
   CONTACT_URL,
   FLOW,
@@ -259,6 +260,17 @@ export default function AiPage() {
                 </div>
               );
             })}
+            <div className="rounded-xl border border-dashed border-neutral-300 p-6 sm:p-7 md:col-span-2">
+              <p className={`text-[13px] font-medium ${TEAL}`}>
+                {CASES_EXTRA.label}
+              </p>
+              <h3 className="mt-3 font-bold leading-[1.7]">
+                {CASES_EXTRA.title}
+              </h3>
+              <p className={`mt-3 max-w-[760px] text-sm leading-[1.9] ${GRAY}`}>
+                {CASES_EXTRA.comment}
+              </p>
+            </div>
           </div>
         </section>
 

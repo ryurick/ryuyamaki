@@ -116,6 +116,13 @@ export const CASES = [
 
 export type CareerPart = string | { label: string; href: string };
 
+export const CASES_EXTRA = {
+  label: "対応できること",
+  title: "このほかの細かい自動化も、ひと通り作れます",
+  comment:
+    "請求書の発行、入金の消し込み、レシートの読み取り、問い合わせ返信の下書き、予約・注文フォーム、顧客リストの一元化、シフト表づくりなど。GmailやGoogleスプレッドシートなどのGoogle製品、Microsoft製品まわりの自動化にも対応します。無料診断のあと、効くところから小さく作ってお渡しします。",
+} as const;
+
 export const CAREER = {
   years: "11年",
   textParts: [
