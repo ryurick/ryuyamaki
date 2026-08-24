@@ -74,6 +74,15 @@ function ServiceIcon({
       </svg>
     );
   }
+  if (name === "ec") {
+    return (
+      <svg {...common}>
+        <circle cx="9" cy="20" r="1" />
+        <circle cx="17" cy="20" r="1" />
+        <path d="M3 4h2l2.4 11h10.2L20 7H6" />
+      </svg>
+    );
+  }
   return (
     <svg {...common}>
       <circle cx="12" cy="12" r="9" />
@@ -232,13 +241,6 @@ export default function AiPage() {
                   <p className={`mt-3 text-sm leading-[1.9] ${GRAY}`}>
                     {c.comment}
                   </p>
-                  {c.href && (
-                    <p
-                      className={`mt-4 text-[13px] ${TEAL} underline decoration-[#0F6E66]/40 underline-offset-4`}
-                    >
-                      {new URL(c.href).hostname}
-                    </p>
-                  )}
                 </>
               );
               return c.href ? (

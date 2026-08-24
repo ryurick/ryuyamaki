@@ -60,6 +60,15 @@ export const PAIN_CATEGORIES = [
       "勤怠の集計や給与明細の配布が手作業になっている",
     ],
   },
+  {
+    icon: "ec",
+    title: "ネットショップ運営",
+    items: [
+      "商品説明を書く時間がなくて、新商品の登録が遅れている",
+      "受注のたびに、MakeShopの管理画面とExcelを行き来している",
+      "価格を変えたいのに、商品数が多くて手が回らない",
+    ],
+  },
 ] as const;
 
 export const SERVICES_NOTE =
@@ -98,13 +107,21 @@ export const PRICING = [
 export const PRICING_NOTE =
   "金額はどれも目安です。無料診断のあとに見積もりを出します。";
 
-// コメントは仮の文。後で本人の言葉に差し替える。
+// noteのMakeShop MCP記事が公開されたらURLを入れる
+export const NOTE_MAKESHOP_ARTICLE_URL: string | null = null;
+
 export const CASES = [
   {
-    label: "ペット用品EC（MakeShop）",
-    title: "お客様の犬に合うクッションを選ぶ診断ツールを構築",
-    comment: "問い合わせの内容が整理されて、対応にかかる手間が減りました。",
+    label: "ペット用品のネットショップ（MakeShop）",
+    title: "お客様の犬に合うクッションを選べる診断ページを作りました",
+    comment: "迷って買えなかった人が、選べるように。",
     href: "https://helensmatch.vercel.app/",
+  },
+  {
+    label: "同じショップの商品管理",
+    title: "商品の価格の見直しを、AIとMakeShopをつないで半自動にしました",
+    comment: "管理画面を1商品ずつ開く作業がなくなりました。",
+    href: NOTE_MAKESHOP_ARTICLE_URL,
   },
   {
     label: "税理士事務所",
@@ -120,7 +137,7 @@ export const CASES_EXTRA = {
   label: "対応できること",
   title: "このほかの細かい自動化も、ひと通り作れます",
   comment:
-    "請求書の発行、入金の消し込み、レシートの読み取り、問い合わせ返信の下書き、予約・注文フォーム、顧客リストの一元化、シフト表づくりなど。GmailやGoogleスプレッドシートなどのGoogle製品、Microsoft製品まわりの自動化にも対応します。無料診断のあと、効くところから小さく作ってお渡しします。",
+    "請求書の発行、入金の消し込み、レシートの読み取り、問い合わせ返信の下書き、予約・注文フォーム、顧客リストの一元化、シフト表づくりなど。MakeShopなどのECサイトは、商品登録、価格の変更、受注まわりの作業をAIとつないで減らせます。GmailやGoogleスプレッドシートなどのGoogle製品、Microsoft製品まわりの自動化にも対応します。無料診断のあと、効くところから小さく作ってお渡しします。",
 } as const;
 
 export const CAREER = {
