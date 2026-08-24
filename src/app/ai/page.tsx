@@ -9,9 +9,11 @@ import {
   FLOW,
   HERO,
   NAV,
+  PAIN_CATEGORIES,
   PRICING,
   PRICING_NOTE,
-  SERVICES,
+  SERVICES_LEAD,
+  SERVICES_NOTE,
 } from "@/content/ai";
 
 export const metadata: Metadata = {
@@ -27,7 +29,11 @@ export const metadata: Metadata = {
 const TEAL = "text-[#0F6E66]";
 const GRAY = "text-[#6B7280]";
 
-function ServiceIcon({ name }: { name: (typeof SERVICES)[number]["icon"] }) {
+function ServiceIcon({
+  name,
+}: {
+  name: (typeof PAIN_CATEGORIES)[number]["icon"];
+}) {
   const common = {
     viewBox: "0 0 24 24",
     fill: "none",
@@ -39,17 +45,7 @@ function ServiceIcon({ name }: { name: (typeof SERVICES)[number]["icon"] }) {
     "aria-hidden": true,
   } as const;
 
-  if (name === "writing") {
-    return (
-      <svg {...common}>
-        <path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6z" />
-        <path d="M14 3v6h6" />
-        <path d="M8 13h5" />
-        <path d="M8 17h5" />
-      </svg>
-    );
-  }
-  if (name === "entry") {
+  if (name === "keiri") {
     return (
       <svg {...common}>
         <rect x="5" y="3" width="14" height="18" rx="2" />
@@ -59,10 +55,28 @@ function ServiceIcon({ name }: { name: (typeof SERVICES)[number]["icon"] }) {
       </svg>
     );
   }
+  if (name === "sales") {
+    return (
+      <svg {...common}>
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+        <path d="M8 8.5h8" />
+        <path d="M8 12h5" />
+      </svg>
+    );
+  }
+  if (name === "shukyaku") {
+    return (
+      <svg {...common}>
+        <circle cx="12" cy="12" r="9" />
+        <path d="M3 12h18" />
+        <path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z" />
+      </svg>
+    );
+  }
   return (
     <svg {...common}>
-      <path d="M21 12a9 9 0 1 1-2.94-6.66" />
-      <path d="M21 3v6h-6" />
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3 2" />
     </svg>
   );
 }
@@ -136,20 +150,38 @@ export default function AiPage() {
 
         <section id="service" className="py-12 sm:py-16 md:py-20">
           <SectionTitle>サービス</SectionTitle>
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {SERVICES.map((service) => (
+          <p className={`mx-auto mt-5 max-w-[640px] text-center text-sm leading-[1.9] sm:text-[15px] ${GRAY}`}>
+            {SERVICES_LEAD}
+          </p>
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {PAIN_CATEGORIES.map((category) => (
               <div
-                key={service.icon}
+                key={category.title}
                 className="rounded-xl border border-neutral-200 p-6 sm:p-7"
               >
-                <ServiceIcon name={service.icon} />
-                <h3 className="mt-5 font-bold leading-[1.7]">{service.title}</h3>
-                <p className={`mt-3 text-sm leading-[1.9] ${GRAY}`}>
-                  {service.body}
-                </p>
+                <div className="flex items-center gap-3">
+                  <ServiceIcon name={category.icon} />
+                  <h3 className="font-bold">{category.title}</h3>
+                </div>
+                <ul className="mt-4 space-y-2.5">
+                  {category.items.map((item) => (
+                    <li
+                      key={item}
+                      className={`flex gap-2.5 text-sm leading-[1.8] ${GRAY}`}
+                    >
+                      <span aria-hidden className={`mt-[2px] shrink-0 ${TEAL}`}>
+                        ✓
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
+          <p className={`mx-auto mt-7 max-w-[640px] text-center text-sm leading-[1.9] sm:text-[15px]`}>
+            {SERVICES_NOTE}
+          </p>
         </section>
 
         <section id="flow" className="py-12 sm:py-16 md:py-20">
