@@ -44,7 +44,7 @@ export function HeroWaves({
       ctx.clearRect(0, 0, w, h);
       for (let i = 0; i < LINES; i++) {
         const progress = i / (LINES - 1);
-        const baseY = h * (0.5 + progress * 0.3);
+        const baseY = h * (0.58 + progress * 0.14);
         ctx.beginPath();
         for (let x = 0; x <= w; x += 6) {
           const nx = x / w;
