@@ -57,11 +57,6 @@ export const WORKS: readonly Work[] = [
     },
   },
   {
-    title: "税理士事務所の記事作成支援",
-    description: "専門記事の下書きをAIで自動生成",
-    link: null,
-  },
-  {
     title: "Helen's Match",
     description: "犬に合うクッションを選ぶ診断ツール",
     link: {
