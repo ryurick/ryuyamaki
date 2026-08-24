@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Anton } from "next/font/google";
 import { ScrollHint } from "@/components/ScrollHint";
 import { HeroWaves } from "@/components/home/HeroWaves";
-import { Magnetic } from "@/components/home/Magnetic";
 import { Parallax } from "@/components/home/Parallax";
 import { Marquee } from "@/components/home/Marquee";
 import { MouseGlow } from "@/components/home/MouseGlow";
@@ -42,28 +41,18 @@ export default function Home() {
 
       <div className="relative z-10">
         <header className="sticky top-0 z-50 border-b border-neutral-200/70 bg-white/75 backdrop-blur-md">
-          <div className="mx-auto flex w-full max-w-5xl items-center justify-end px-6 py-3.5">
-            <div className="flex items-center gap-8">
-              <nav className="hidden items-center gap-7 sm:flex">
-                {NAV.map((item) => (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    className="text-[11px] font-medium tracking-[0.22em] text-neutral-500 transition-colors hover:text-[#0F6E66]"
-                  >
-                    {item.label}
-                  </a>
-                ))}
-              </nav>
-              <Magnetic>
-                <Link
-                  href={HERO.aiLink.href}
-                  className="inline-block rounded-full border border-neutral-300 px-4 py-2 text-[13px] transition-colors hover:border-[#0F6E66] hover:text-[#0F6E66]"
+          <div className="mx-auto flex w-full max-w-5xl items-center justify-end px-6 py-4">
+            <nav className="flex items-center gap-4 sm:gap-7">
+              {NAV.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="text-[10px] font-medium tracking-[0.14em] text-neutral-500 transition-colors hover:text-[#0F6E66] sm:text-[11px] sm:tracking-[0.22em]"
                 >
-                  {HERO.aiLink.label}
-                </Link>
-              </Magnetic>
-            </div>
+                  {item.label}
+                </a>
+              ))}
+            </nav>
           </div>
         </header>
 
@@ -72,18 +61,26 @@ export default function Home() {
 
           <div className="relative flex flex-1 flex-col justify-center">
             <div className="flex flex-col gap-10 sm:flex-row sm:items-center sm:gap-8">
-              <h1 className="logo-rise relative z-10 w-full max-w-[560px] shrink-0 sm:w-[48%]">
-                <Image
-                  src="/logo.png"
-                  alt={HERO.name}
-                  width={1845}
-                  height={447}
-                  sizes="(min-width: 1024px) 470px, 100vw"
-                  loading="eager"
-                  fetchPriority="high"
-                  className="h-auto w-full"
-                />
-              </h1>
+              <div className="relative z-10 w-full max-w-[560px] shrink-0 sm:w-[48%]">
+                <h1 className="logo-rise">
+                  <Image
+                    src="/logo.png"
+                    alt={HERO.name}
+                    width={1845}
+                    height={447}
+                    sizes="(min-width: 1024px) 470px, 100vw"
+                    loading="eager"
+                    fetchPriority="high"
+                    className="h-auto w-full"
+                  />
+                </h1>
+                <p
+                  className="logo-rise mt-5 text-sm text-[#6B7280] sm:text-[15px]"
+                  style={{ animationDelay: "1400ms", animationDuration: "2400ms" }}
+                >
+                  {HERO.tagline}
+                </p>
+              </div>
               <Parallax
                 speed={-0.06}
                 className="pointer-events-none sm:min-w-0 sm:flex-1"

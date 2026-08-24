@@ -2,7 +2,7 @@
 
 export const HERO = {
   name: "RYU YAMAKI",
-  aiLink: { label: "AI活用支援 →", href: "/ai" },
+  tagline: "Making things to see something new.",
 } as const;
 
 export const NAV = [
