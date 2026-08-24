@@ -9,7 +9,7 @@ import { Marquee } from "@/components/home/Marquee";
 import { MouseGlow } from "@/components/home/MouseGlow";
 import { Rise } from "@/components/home/Rise";
 import {
-  CAREER_TEXT,
+  CAREER,
   CONTACT,
   HERO,
   MARQUEE_WORDS,
@@ -132,14 +132,17 @@ export default function Home() {
                       <h3 className="text-[1.75rem] font-bold tracking-tight transition-transform duration-300 ease-out group-hover:translate-x-2 sm:text-4xl">
                         {work.title}
                       </h3>
-                      <p className="mt-3 flex flex-wrap items-baseline gap-x-6 gap-y-1 text-sm sm:text-[15px]">
-                        <span className={GRAY}>{work.tag}</span>
-                        {work.link && (
-                          <span className="text-[#0F6E66] underline decoration-[#0F6E66]/40 underline-offset-4 transition-colors group-hover:decoration-[#0F6E66]">
-                            {work.link.label}
-                          </span>
-                        )}
+                      <p className={`mt-2 text-sm sm:text-[15px] ${GRAY}`}>
+                        {work.description}
                       </p>
+                      {work.link && (
+                        <span className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-neutral-300 px-4 py-1.5 text-[13px] text-[#111] transition-colors group-hover:border-[#0F6E66] group-hover:text-[#0F6E66]">
+                          {work.link.label}
+                          <span aria-hidden className="text-[0.9em]">
+                            {work.link.external ? "↗" : "→"}
+                          </span>
+                        </span>
+                      )}
                     </div>
                     <span
                       aria-hidden
@@ -182,8 +185,9 @@ export default function Home() {
               <SectionLabel>CAREER</SectionLabel>
             </Rise>
             <Rise delay={90}>
-              <p className="mt-6 max-w-[720px] text-[15px] leading-[1.9] sm:text-base">
-                {CAREER_TEXT}
+              <p className="mt-6 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-[15px] sm:text-base">
+                <span>{CAREER.main}</span>
+                <span className={GRAY}>{CAREER.clients}</span>
               </p>
             </Rise>
           </section>
