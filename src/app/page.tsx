@@ -195,8 +195,8 @@ export default function Home() {
               <SectionLabel>MUSIC</SectionLabel>
             </Rise>
             <Rise delay={90}>
-              <p className="mt-6 max-w-[720px] text-[15px] leading-[1.9] sm:text-base">
-                {MUSIC.textBefore}
+              <p className="mt-6 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-[15px] sm:text-base">
+                <span>{MUSIC.instruments}</span>
                 <a
                   href={MUSIC.link.href}
                   target="_blank"
@@ -205,7 +205,6 @@ export default function Home() {
                 >
                   {MUSIC.link.label}
                 </a>
-                {MUSIC.textAfter}
               </p>
             </Rise>
           </section>

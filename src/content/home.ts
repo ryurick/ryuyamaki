@@ -74,12 +74,11 @@ export const CAREER_TEXT =
   "エンジニアとして11年。ANA・JAL・JCB・プロフェリエなどの業務システムを開発・設計してきました。";
 
 export const MUSIC = {
-  textBefore: "ピアノとトランペットを演奏しています。トランペットは",
+  instruments: "Piano / Trumpet",
   link: {
-    label: "ウィンクルムフィルハーモニー管弦楽団",
+    label: "Vinculum Philharmonic",
     href: "https://vinculumphil.jp/",
   },
-  textAfter: "で吹いています。",
 } as const;
 
 export const CONTACT = {
