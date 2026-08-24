@@ -13,6 +13,7 @@ import {
   CONTACT,
   HERO,
   MARQUEE_WORDS,
+  MUSIC,
   NAV,
   WORKS,
 } from "@/content/home";
@@ -40,17 +41,7 @@ export default function Home() {
 
       <div className="relative z-10">
         <header className="sticky top-0 z-50 border-b border-neutral-200/70 bg-white/75 backdrop-blur-md">
-          <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-3.5">
-            <Link href="/" className="inline-flex items-center">
-              <Image
-                src="/logo.png"
-                alt={HERO.name}
-                width={1845}
-                height={447}
-                priority
-                className="h-6 w-auto sm:h-7"
-              />
-            </Link>
+          <div className="mx-auto flex w-full max-w-5xl items-center justify-end px-6 py-3.5">
             <div className="flex items-center gap-8">
               <nav className="hidden items-center gap-7 sm:flex">
                 {NAV.map((item) => (
@@ -195,6 +186,26 @@ export default function Home() {
             <Rise delay={90}>
               <p className="mt-6 max-w-[720px] text-[15px] leading-[1.9] sm:text-base">
                 {CAREER_TEXT}
+              </p>
+            </Rise>
+          </section>
+
+          <section id="music" className="scroll-mt-20 pt-20 sm:pt-28">
+            <Rise>
+              <SectionLabel>MUSIC</SectionLabel>
+            </Rise>
+            <Rise delay={90}>
+              <p className="mt-6 max-w-[720px] text-[15px] leading-[1.9] sm:text-base">
+                {MUSIC.textBefore}
+                <a
+                  href={MUSIC.link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#0F6E66] underline decoration-[#0F6E66]/40 underline-offset-4 transition-colors hover:decoration-[#0F6E66]"
+                >
+                  {MUSIC.link.label}
+                </a>
+                {MUSIC.textAfter}
               </p>
             </Rise>
           </section>

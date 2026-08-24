@@ -8,6 +8,7 @@ export const HERO = {
 export const NAV = [
   { label: "WORKS", href: "#works" },
   { label: "CAREER", href: "#career" },
+  { label: "MUSIC", href: "#music" },
   { label: "CONTACT", href: "#contact" },
 ] as const;
 
@@ -71,6 +72,15 @@ export const WORKS: readonly Work[] = [
 
 export const CAREER_TEXT =
   "エンジニアとして11年。ANA・JAL・JCB・プロフェリエなどの業務システムを開発・設計してきました。";
+
+export const MUSIC = {
+  textBefore: "ピアノとトランペットを演奏しています。トランペットは",
+  link: {
+    label: "ウィンクルムフィルハーモニー管弦楽団",
+    href: "https://vinculumphil.jp/",
+  },
+  textAfter: "で吹いています。",
+} as const;
 
 export const CONTACT = {
   email: "ryu8mk@gmail.com",
