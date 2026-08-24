@@ -9,8 +9,8 @@ export const HERO = {
 export const NAV = [
   { label: "CAREER", href: "#career" },
   { label: "MUSIC", href: "#music" },
-  { label: "WORKS", href: "#works" },
   { label: "MOVIES", href: "#movies" },
+  { label: "WORKS", href: "#works" },
   { label: "CONTACT", href: "#contact" },
 ] as const;
 
@@ -69,7 +69,7 @@ export const WORKS: readonly Work[] = [
 
 export const CAREER = {
   main: "Software Engineer / 11 years",
-  clients: "ANA / JAL / JCB / Profelier",
+  clients: "ANA / JAL / JCB / Profelier / Life Insurance",
 } as const;
 
 export const MUSIC = {

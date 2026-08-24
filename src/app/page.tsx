@@ -149,6 +149,24 @@ export default function Home() {
             </Rise>
           </section>
 
+          <section id="movies" className="scroll-mt-20 pt-20 sm:pt-28">
+            <Rise>
+              <SectionLabel>MOVIES</SectionLabel>
+            </Rise>
+            <Rise delay={90}>
+              <p className="mt-6 text-[15px] sm:text-base">
+                <a
+                  href={MOVIES.link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#0F6E66] underline decoration-[#0F6E66]/40 underline-offset-4 transition-colors hover:decoration-[#0F6E66]"
+                >
+                  {MOVIES.link.label}
+                </a>
+              </p>
+            </Rise>
+          </section>
+
           <section id="works" className="scroll-mt-20 pt-20 sm:pt-28">
             <Rise>
               <SectionLabel>WORKS</SectionLabel>
@@ -212,24 +230,6 @@ export default function Home() {
                 );
               })}
             </ol>
-          </section>
-
-          <section id="movies" className="scroll-mt-20 pt-20 sm:pt-28">
-            <Rise>
-              <SectionLabel>MOVIES</SectionLabel>
-            </Rise>
-            <Rise delay={90}>
-              <p className="mt-6 text-[15px] sm:text-base">
-                <a
-                  href={MOVIES.link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#0F6E66] underline decoration-[#0F6E66]/40 underline-offset-4 transition-colors hover:decoration-[#0F6E66]"
-                >
-                  {MOVIES.link.label}
-                </a>
-              </p>
-            </Rise>
           </section>
 
           <section id="contact" className="scroll-mt-20 py-20 sm:py-28">
