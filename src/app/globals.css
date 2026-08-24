@@ -102,6 +102,89 @@ body {
   }
 }
 
+/* ---------- home (portfolio) ---------- */
+
+.hero-mask-strong {
+  -webkit-mask-image: radial-gradient(
+    ellipse 52% 52% at center,
+    black 35%,
+    transparent 76%
+  );
+  mask-image: radial-gradient(
+    ellipse 52% 52% at center,
+    black 35%,
+    transparent 76%
+  );
+}
+
+@keyframes letter-rise {
+  from {
+    transform: translateY(115%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.split-letter {
+  display: inline-block;
+  transform: translateY(115%);
+  animation: letter-rise 900ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 30s linear infinite;
+  will-change: transform;
+}
+
+.marquee-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #141414;
+}
+
+@supports not (-webkit-text-stroke: 1px black) {
+  .marquee-outline {
+    color: #d4d4d4;
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+.float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .split-letter {
+    animation: none;
+    transform: none;
+  }
+  .marquee-track,
+  .float-slow {
+    animation: none;
+  }
+}
+
 /* Lenis smooth scroll */
 html.lenis,
 html.lenis body {
