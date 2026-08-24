@@ -8,7 +8,6 @@ import { Parallax } from "@/components/home/Parallax";
 import { Marquee } from "@/components/home/Marquee";
 import { MouseGlow } from "@/components/home/MouseGlow";
 import { Rise } from "@/components/home/Rise";
-import { SplitLetters } from "@/components/home/SplitLetters";
 import {
   CAREER_TEXT,
   CONTACT,
@@ -42,11 +41,15 @@ export default function Home() {
       <div className="relative z-10">
         <header className="sticky top-0 z-50 border-b border-neutral-200/70 bg-white/75 backdrop-blur-md">
           <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-3.5">
-            <Link
-              href="/"
-              className={`${anton.className} text-base tracking-[0.05em]`}
-            >
-              {HERO.name}
+            <Link href="/" className="inline-flex items-center">
+              <Image
+                src="/logo.png"
+                alt={HERO.name}
+                width={1845}
+                height={447}
+                priority
+                className="h-6 w-auto sm:h-7"
+              />
             </Link>
             <div className="flex items-center gap-8">
               <nav className="hidden items-center gap-7 sm:flex">
@@ -77,10 +80,17 @@ export default function Home() {
 
           <div className="relative flex flex-1 flex-col justify-center">
             <div className="flex flex-col gap-10 sm:flex-row sm:items-center sm:gap-8">
-              <h1
-                className={`${anton.className} relative z-10 shrink-0 text-[clamp(3.5rem,16vw,5rem)] leading-[0.95] tracking-[0.01em]`}
-              >
-                <SplitLetters text={HERO.name} baseDelay={150} />
+              <h1 className="logo-rise relative z-10 w-full max-w-[560px] shrink-0 sm:w-[48%]">
+                <Image
+                  src="/logo.png"
+                  alt={HERO.name}
+                  width={1845}
+                  height={447}
+                  sizes="(min-width: 1024px) 470px, 100vw"
+                  loading="eager"
+                  fetchPriority="high"
+                  className="h-auto w-full"
+                />
               </h1>
               <Parallax
                 speed={-0.06}
