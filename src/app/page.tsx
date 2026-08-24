@@ -73,12 +73,12 @@ export default function Home() {
         </header>
 
         <section className="relative mx-auto flex min-h-[calc(100svh-3.75rem)] w-full max-w-5xl flex-col px-6">
-          <HeroWaves />
+          <HeroWaves className="pointer-events-none absolute inset-y-0 left-[8vw] right-[8vw] h-full w-auto sm:inset-x-0 sm:w-full" />
 
           <div className="relative flex flex-1 flex-col justify-center">
             <div className="flex flex-col gap-10 sm:flex-row sm:items-center sm:gap-8">
               <h1
-                className={`${anton.className} relative z-10 shrink-0 text-[clamp(2.25rem,6.5vw,5rem)] leading-[0.95] tracking-[0.01em]`}
+                className={`${anton.className} relative z-10 shrink-0 text-[clamp(3.25rem,6.5vw,5rem)] leading-[0.95] tracking-[0.01em]`}
               >
                 <SplitLetters text={HERO.name} baseDelay={150} />
               </h1>

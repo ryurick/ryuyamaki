@@ -2,7 +2,11 @@
 
 import { useEffect, useRef } from "react";
 
-export function HeroWaves() {
+export function HeroWaves({
+  className = "pointer-events-none absolute inset-0 h-full w-full",
+}: {
+  className?: string;
+}) {
   const ref = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
@@ -81,11 +85,5 @@ export function HeroWaves() {
     };
   }, []);
 
-  return (
-    <canvas
-      ref={ref}
-      aria-hidden
-      className="pointer-events-none absolute inset-0 h-full w-full"
-    />
-  );
+  return <canvas ref={ref} aria-hidden className={className} />;
 }
