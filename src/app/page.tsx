@@ -41,7 +41,7 @@ export default function Home() {
 
       <div className="relative z-10">
         <header className="sticky top-0 z-50 border-b border-neutral-200/70 bg-white/75 backdrop-blur-md">
-          <div className="mx-auto flex w-full max-w-5xl items-center justify-end px-6 py-4">
+          <div className="mx-auto flex w-full max-w-5xl items-center justify-center px-6 py-4 sm:justify-end">
             <nav className="flex items-center gap-4 sm:gap-7">
               {NAV.map((item) => (
                 <a
@@ -75,8 +75,14 @@ export default function Home() {
                   />
                 </h1>
                 <p
-                  className="logo-rise mt-5 text-sm text-[#6B7280] sm:text-[15px]"
+                  className="logo-rise mt-5 text-sm text-[#374151] sm:text-[15px]"
                   style={{ animationDelay: "1400ms", animationDuration: "2400ms" }}
+                >
+                  {HERO.taglineJa}
+                </p>
+                <p
+                  className="logo-rise mt-1.5 text-xs text-[#9CA3AF] sm:text-sm"
+                  style={{ animationDelay: "1700ms", animationDuration: "2400ms" }}
                 >
                   {HERO.tagline}
                 </p>
@@ -112,6 +118,37 @@ export default function Home() {
         />
 
         <main className="mx-auto w-full max-w-5xl px-6">
+          <section id="career" className="scroll-mt-20 pt-20 sm:pt-28">
+            <Rise>
+              <SectionLabel>CAREER</SectionLabel>
+            </Rise>
+            <Rise delay={90}>
+              <p className="mt-6 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-[15px] sm:text-base">
+                <span>{CAREER.main}</span>
+                <span className={GRAY}>{CAREER.clients}</span>
+              </p>
+            </Rise>
+          </section>
+
+          <section id="music" className="scroll-mt-20 pt-20 sm:pt-28">
+            <Rise>
+              <SectionLabel>MUSIC</SectionLabel>
+            </Rise>
+            <Rise delay={90}>
+              <p className="mt-6 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-[15px] sm:text-base">
+                <span>{MUSIC.instruments}</span>
+                <a
+                  href={MUSIC.link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#0F6E66] underline decoration-[#0F6E66]/40 underline-offset-4 transition-colors hover:decoration-[#0F6E66]"
+                >
+                  {MUSIC.link.label}
+                </a>
+              </p>
+            </Rise>
+          </section>
+
           <section id="works" className="scroll-mt-20 pt-20 sm:pt-28">
             <Rise>
               <SectionLabel>WORKS</SectionLabel>
@@ -175,37 +212,6 @@ export default function Home() {
                 );
               })}
             </ol>
-          </section>
-
-          <section id="career" className="scroll-mt-20 pt-20 sm:pt-28">
-            <Rise>
-              <SectionLabel>CAREER</SectionLabel>
-            </Rise>
-            <Rise delay={90}>
-              <p className="mt-6 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-[15px] sm:text-base">
-                <span>{CAREER.main}</span>
-                <span className={GRAY}>{CAREER.clients}</span>
-              </p>
-            </Rise>
-          </section>
-
-          <section id="music" className="scroll-mt-20 pt-20 sm:pt-28">
-            <Rise>
-              <SectionLabel>MUSIC</SectionLabel>
-            </Rise>
-            <Rise delay={90}>
-              <p className="mt-6 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-[15px] sm:text-base">
-                <span>{MUSIC.instruments}</span>
-                <a
-                  href={MUSIC.link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#0F6E66] underline decoration-[#0F6E66]/40 underline-offset-4 transition-colors hover:decoration-[#0F6E66]"
-                >
-                  {MUSIC.link.label}
-                </a>
-              </p>
-            </Rise>
           </section>
 
           <section id="movies" className="scroll-mt-20 pt-20 sm:pt-28">

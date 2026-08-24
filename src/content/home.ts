@@ -2,13 +2,14 @@
 
 export const HERO = {
   name: "RYU YAMAKI",
+  taglineJa: "新しい景色のために。",
   tagline: "Making things to see something new.",
 } as const;
 
 export const NAV = [
-  { label: "WORKS", href: "#works" },
   { label: "CAREER", href: "#career" },
   { label: "MUSIC", href: "#music" },
+  { label: "WORKS", href: "#works" },
   { label: "MOVIES", href: "#movies" },
   { label: "CONTACT", href: "#contact" },
 ] as const;
@@ -42,13 +43,9 @@ export type Work = {
 
 export const WORKS: readonly Work[] = [
   {
-    title: "Helen's Match",
-    description: "犬に合うクッションを選ぶ診断ツール",
-    link: {
-      label: "サイトを見る",
-      href: "https://helensmatch.vercel.app/",
-      external: true,
-    },
+    title: "AI活用支援",
+    description: "小さな会社や個人事業主のAI導入を支援",
+    link: { label: "詳しく", href: "/ai", external: false },
   },
   {
     title: "AI商品棚",
@@ -65,9 +62,13 @@ export const WORKS: readonly Work[] = [
     link: null,
   },
   {
-    title: "AI活用支援",
-    description: "小さな会社や個人事業主のAI導入を支援",
-    link: { label: "詳しく", href: "/ai", external: false },
+    title: "Helen's Match",
+    description: "犬に合うクッションを選ぶ診断ツール",
+    link: {
+      label: "サイトを見る",
+      href: "https://helensmatch.vercel.app/",
+      external: true,
+    },
   },
 ];
 
