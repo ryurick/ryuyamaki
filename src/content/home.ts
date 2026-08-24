@@ -9,6 +9,7 @@ export const NAV = [
   { label: "WORKS", href: "#works" },
   { label: "CAREER", href: "#career" },
   { label: "MUSIC", href: "#music" },
+  { label: "MOVIES", href: "#movies" },
   { label: "CONTACT", href: "#contact" },
 ] as const;
 
@@ -22,11 +23,6 @@ export const MARQUEE_WORDS = [
   "TOKYO",
 ] as const;
 
-// 02（AI商品棚）の説明は仮。セキュア社に社名掲載の確認が取れるまでの間、
-// NGだった場合は次の文に差し替える:
-// 「小売店舗向けのAIプロダクトを開発」
-export const AI_SHELF_DESCRIPTION = "株式会社セキュアのAI商品棚を開発";
-
 export type WorkLink = {
   label: string;
   href: string;
@@ -35,14 +31,14 @@ export type WorkLink = {
 
 export type Work = {
   title: string;
-  description: string;
+  tag: string;
   link: WorkLink | null;
 };
 
 export const WORKS: readonly Work[] = [
   {
     title: "Helen's Match",
-    description: "犬に合うクッションを選ぶ診断ツール",
+    tag: "Web App / EC",
     link: {
       label: "サイトを見る",
       href: "https://helensmatch.vercel.app/",
@@ -51,7 +47,7 @@ export const WORKS: readonly Work[] = [
   },
   {
     title: "AI商品棚",
-    description: AI_SHELF_DESCRIPTION,
+    tag: "AI / Retail",
     link: {
       label: "ニュース記事",
       href: "https://secureinc.co.jp/news/detail.html?id=1641",
@@ -60,12 +56,12 @@ export const WORKS: readonly Work[] = [
   },
   {
     title: "税理士事務所の記事作成支援",
-    description: "専門記事の下書きをAIで自動生成",
+    tag: "AI / Writing",
     link: null,
   },
   {
     title: "AI活用支援",
-    description: "小さな会社や個人事業主のAI導入を支援",
+    tag: "AI / Consulting",
     link: { label: "詳しく", href: "/ai", external: false },
   },
 ];
@@ -81,16 +77,19 @@ export const MUSIC = {
   },
 } as const;
 
+export const MOVIES = {
+  link: {
+    label: "Filmarks",
+    href: "https://filmarks.com/users/Ryumilkrick",
+  },
+} as const;
+
 export const CONTACT = {
   email: "ryu8mk@gmail.com",
   links: [
     {
       label: "Instagram",
       href: "https://www.instagram.com/makky.ryu__88/",
-    },
-    {
-      label: "Filmarks",
-      href: "https://filmarks.com/users/Ryumilkrick",
     },
   ],
 } as const;

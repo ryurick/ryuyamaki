@@ -13,6 +13,7 @@ import {
   CONTACT,
   HERO,
   MARQUEE_WORDS,
+  MOVIES,
   MUSIC,
   NAV,
   WORKS,
@@ -131,17 +132,14 @@ export default function Home() {
                       <h3 className="text-[1.75rem] font-bold tracking-tight transition-transform duration-300 ease-out group-hover:translate-x-2 sm:text-4xl">
                         {work.title}
                       </h3>
-                      <p className={`mt-2 text-sm sm:text-[15px] ${GRAY}`}>
-                        {work.description}
-                      </p>
-                      {work.link && (
-                        <span className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-neutral-300 px-4 py-1.5 text-[13px] text-[#111] transition-colors group-hover:border-[#0F6E66] group-hover:text-[#0F6E66]">
-                          {work.link.label}
-                          <span aria-hidden className="text-[0.9em]">
-                            {work.link.external ? "↗" : "→"}
+                      <p className="mt-3 flex flex-wrap items-baseline gap-x-6 gap-y-1 text-sm sm:text-[15px]">
+                        <span className={GRAY}>{work.tag}</span>
+                        {work.link && (
+                          <span className="text-[#0F6E66] underline decoration-[#0F6E66]/40 underline-offset-4 transition-colors group-hover:decoration-[#0F6E66]">
+                            {work.link.label}
                           </span>
-                        </span>
-                      )}
+                        )}
+                      </p>
                     </div>
                     <span
                       aria-hidden
@@ -204,6 +202,24 @@ export default function Home() {
                   className="text-[#0F6E66] underline decoration-[#0F6E66]/40 underline-offset-4 transition-colors hover:decoration-[#0F6E66]"
                 >
                   {MUSIC.link.label}
+                </a>
+              </p>
+            </Rise>
+          </section>
+
+          <section id="movies" className="scroll-mt-20 pt-20 sm:pt-28">
+            <Rise>
+              <SectionLabel>MOVIES</SectionLabel>
+            </Rise>
+            <Rise delay={90}>
+              <p className="mt-6 text-[15px] sm:text-base">
+                <a
+                  href={MOVIES.link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#0F6E66] underline decoration-[#0F6E66]/40 underline-offset-4 transition-colors hover:decoration-[#0F6E66]"
+                >
+                  {MOVIES.link.label}
                 </a>
               </p>
             </Rise>
