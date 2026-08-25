@@ -172,63 +172,60 @@ export default function Home() {
               <SectionLabel>WORKS</SectionLabel>
             </Rise>
             <ol className="mt-8">
-              {WORKS.map((work, i) => {
-                const inner = (
-                  <div className="grid items-baseline gap-2 py-7 sm:grid-cols-[72px_1fr_auto] sm:gap-6 sm:py-9">
-                    <span
-                      className={`text-sm ${GRAY} transition-colors group-hover:text-[#0F6E66]`}
-                    >
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <div>
-                      <h3 className="text-[1.75rem] font-bold tracking-tight transition-transform duration-300 ease-out group-hover:translate-x-2 sm:text-4xl">
-                        {work.title}
-                      </h3>
-                      <p className={`mt-2 text-sm sm:text-[15px] ${GRAY}`}>
-                        {work.description}
-                      </p>
-                      {work.link && (
-                        <span className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-neutral-300 px-4 py-1.5 text-[13px] text-[#111] transition-colors group-hover:border-[#0F6E66] group-hover:text-[#0F6E66]">
-                          {work.link.label}
-                          <span aria-hidden className="text-[0.9em]">
-                            {work.link.external ? "↗" : "→"}
-                          </span>
-                        </span>
-                      )}
+              {WORKS.map((work, i) => (
+                <Rise key={work.title} delay={i * 90}>
+                  <li className="group border-b border-neutral-200 transition-colors hover:bg-[#0F6E66]/[0.03] first:border-t">
+                    <div className="grid items-baseline gap-2 py-7 sm:grid-cols-[72px_1fr] sm:gap-6 sm:py-9">
+                      <span
+                        className={`text-sm ${GRAY} transition-colors group-hover:text-[#0F6E66]`}
+                      >
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <div>
+                        <h3 className="text-[1.75rem] font-bold tracking-tight transition-transform duration-300 ease-out group-hover:translate-x-2 sm:text-4xl">
+                          {work.title}
+                        </h3>
+                        <p className={`mt-2 text-sm sm:text-[15px] ${GRAY}`}>
+                          {work.description}
+                        </p>
+                        {work.links.length > 0 && (
+                          <p className="mt-4 flex flex-wrap gap-2.5">
+                            {work.links.map((link) => {
+                              const pill =
+                                "inline-flex items-center gap-1.5 rounded-full border border-neutral-300 px-4 py-1.5 text-[13px] text-[#111] transition-colors hover:border-[#0F6E66] hover:text-[#0F6E66]";
+                              return link.external ? (
+                                <a
+                                  key={link.href}
+                                  href={link.href}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className={pill}
+                                >
+                                  {link.label}
+                                  <span aria-hidden className="text-[0.9em]">
+                                    ↗
+                                  </span>
+                                </a>
+                              ) : (
+                                <Link
+                                  key={link.href}
+                                  href={link.href}
+                                  className={pill}
+                                >
+                                  {link.label}
+                                  <span aria-hidden className="text-[0.9em]">
+                                    →
+                                  </span>
+                                </Link>
+                              );
+                            })}
+                          </p>
+                        )}
+                      </div>
                     </div>
-                    <span
-                      aria-hidden
-                      className="hidden text-2xl text-[#0F6E66] opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100 sm:block"
-                    >
-                      →
-                    </span>
-                  </div>
-                );
-                return (
-                  <Rise key={work.title} delay={i * 90}>
-                    <li className="group border-b border-neutral-200 transition-colors hover:bg-[#0F6E66]/[0.03] first:border-t">
-                      {work.link ? (
-                        work.link.external ? (
-                          <a
-                            href={work.link.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="block"
-                          >
-                            {inner}
-                          </a>
-                        ) : (
-                          <Link href={work.link.href} className="block">
-                            {inner}
-                          </Link>
-                        )
-                      ) : (
-                        inner
-                      )}
-                    </li>
-                  </Rise>
-                );
-              })}
+                  </li>
+                </Rise>
+              ))}
             </ol>
           </section>
 

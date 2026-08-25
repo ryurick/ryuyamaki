@@ -110,26 +110,41 @@ export const PRICING_NOTE =
 // noteのMakeShop MCP記事が公開されたらURLを入れる
 export const NOTE_MAKESHOP_ARTICLE_URL: string | null = null;
 
-export const CASES = [
+export type CaseLink = { label: string; href: string };
+
+export type Case = {
+  label: string;
+  title: string;
+  comment: string;
+  links: CaseLink[];
+};
+
+export const CASES: readonly Case[] = [
   {
-    label: "ペット用品のネットショップ（MakeShop）",
+    label: "Helen's PetBed（ペット用品のネットショップ・MakeShop）",
     title: "お客様の犬に合うクッションを選べる診断ページを作りました",
-    comment: "迷って買えなかった人が、選べるように。",
-    href: "https://helensmatch.vercel.app/",
+    comment:
+      "迷って買えなかった人が、選べるように。Instagramフォロワー2万人のペット用品ブランドの公式ショップで使われています。",
+    links: [
+      { label: "診断ページ", href: "https://helensmatch.vercel.app/" },
+      { label: "Helen's PetBed 公式サイト", href: "https://www.helenspetbed.com/" },
+    ],
   },
   {
     label: "同じショップの商品管理",
     title: "商品の価格の見直しを、AIとMakeShopをつないで半自動にしました",
     comment: "管理画面を1商品ずつ開く作業がなくなりました。",
-    href: NOTE_MAKESHOP_ARTICLE_URL,
+    links: NOTE_MAKESHOP_ARTICLE_URL
+      ? [{ label: "noteの記事", href: NOTE_MAKESHOP_ARTICLE_URL }]
+      : [],
   },
   {
     label: "税理士事務所",
     title: "専門記事の下書き作成を自動化",
     comment: "記事を書く時間が短くなり、ほかの業務に時間を使えるようになりました。",
-    href: null,
+    links: [],
   },
-] as const;
+];
 
 export type CareerPart = string | { label: string; href: string };
 

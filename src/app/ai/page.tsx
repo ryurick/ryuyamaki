@@ -233,35 +233,33 @@ export default function AiPage() {
         <section id="cases" className="py-12 sm:py-16 md:py-20">
           <SectionTitle>事例</SectionTitle>
           <div className="mt-10 grid gap-5 md:grid-cols-2">
-            {CASES.map((c) => {
-              const body = (
-                <>
-                  <p className={`text-[13px] font-medium ${TEAL}`}>{c.label}</p>
-                  <h3 className="mt-3 font-bold leading-[1.7]">{c.title}</h3>
-                  <p className={`mt-3 text-sm leading-[1.9] ${GRAY}`}>
-                    {c.comment}
+            {CASES.map((c) => (
+              <div
+                key={c.label}
+                className="rounded-xl border border-neutral-200 p-6 sm:p-7"
+              >
+                <p className={`text-[13px] font-medium ${TEAL}`}>{c.label}</p>
+                <h3 className="mt-3 font-bold leading-[1.7]">{c.title}</h3>
+                <p className={`mt-3 text-sm leading-[1.9] ${GRAY}`}>
+                  {c.comment}
+                </p>
+                {c.links.length > 0 && (
+                  <p className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
+                    {c.links.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`text-[13px] ${TEAL} underline decoration-[#0F6E66]/40 underline-offset-4 transition-colors hover:decoration-[#0F6E66]`}
+                      >
+                        {link.label} ↗
+                      </a>
+                    ))}
                   </p>
-                </>
-              );
-              return c.href ? (
-                <a
-                  key={c.label}
-                  href={c.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block rounded-xl border border-neutral-200 p-6 transition-colors hover:border-[#0F6E66]/50 sm:p-7"
-                >
-                  {body}
-                </a>
-              ) : (
-                <div
-                  key={c.label}
-                  className="rounded-xl border border-neutral-200 p-6 sm:p-7"
-                >
-                  {body}
-                </div>
-              );
-            })}
+                )}
+              </div>
+            ))}
             <div className="rounded-xl border border-dashed border-neutral-300 p-6 sm:p-7 md:col-span-2">
               <p className={`text-[13px] font-medium ${TEAL}`}>
                 {CASES_EXTRA.label}

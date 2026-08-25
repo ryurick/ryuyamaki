@@ -38,32 +38,41 @@ export type WorkLink = {
 export type Work = {
   title: string;
   description: string;
-  link: WorkLink | null;
+  links: WorkLink[];
 };
 
 export const WORKS: readonly Work[] = [
   {
     title: "AI活用支援",
     description: "小さな会社や個人事業主のAI導入を支援",
-    link: { label: "詳しく", href: "/ai", external: false },
+    links: [{ label: "詳しく", href: "/ai", external: false }],
   },
   {
     title: "AI商品棚",
     description: AI_SHELF_DESCRIPTION,
-    link: {
-      label: "ニュース記事",
-      href: "https://secureinc.co.jp/news/detail.html?id=1641",
-      external: true,
-    },
+    links: [
+      {
+        label: "ニュース記事",
+        href: "https://secureinc.co.jp/news/detail.html?id=1641",
+        external: true,
+      },
+    ],
   },
   {
     title: "Helen's Match",
-    description: "犬に合うクッションを選ぶ診断ツール",
-    link: {
-      label: "サイトを見る",
-      href: "https://helensmatch.vercel.app/",
-      external: true,
-    },
+    description: "Instagramフォロワー2万人のペット用品ブランドの、犬に合うクッションを選ぶ診断ツール",
+    links: [
+      {
+        label: "サイトを見る",
+        href: "https://helensmatch.vercel.app/",
+        external: true,
+      },
+      {
+        label: "Helen's PetBed 公式",
+        href: "https://www.helenspetbed.com/",
+        external: true,
+      },
+    ],
   },
 ];
 
