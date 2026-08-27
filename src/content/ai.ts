@@ -19,8 +19,7 @@ export const HERO = {
   cta: "無料30分診断を予約",
 } as const;
 
-export const SERVICES_LEAD =
-  "たとえば、こんな困りごとです。どれに当てはまるか分からない段階の相談で大丈夫です。";
+export const SERVICES_LEAD = "たとえば、こんな困りごとです。";
 
 export const PAIN_CATEGORIES = [
   {
@@ -177,6 +176,6 @@ export const CAREER = {
 
 export const CONTACT = {
   title: "無料30分診断を予約",
-  text: "相談する内容が決まっていなくても大丈夫です。画面共有で普段の作業を見せてもらい、AIで減らせそうなところをその場でお伝えします。合わなければ提案はしません。",
+  text: "相談する内容が決まっていなくても大丈夫です。画面共有で普段の作業を見せてもらい、減らせそうなところをその場でお伝えします。",
   button: "予約する",
 } as const;
