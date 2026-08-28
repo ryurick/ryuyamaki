@@ -154,7 +154,7 @@ export const CASES: readonly Case[] = [
     links: [],
   },
   {
-    label: "このサイト",
+    label: "ryuyamaki.com",
     title: "ホームページ制作",
     comment: "",
     links: [{ label: "トップページを見る", href: "https://ryuyamaki.com/" }],
