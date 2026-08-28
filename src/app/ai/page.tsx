@@ -338,7 +338,9 @@ export default function AiPage() {
           <p className={`mx-auto mt-6 max-w-[640px] text-sm leading-[1.9] ${GRAY}`}>
             {CASUAL_CONTACT.before}
             <a
-              href={`mailto:${CASUAL_CONTACT.email}?subject=${encodeURIComponent(CASUAL_CONTACT.subject)}`}
+              href={CASUAL_CONTACT.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-[#0F6E66] underline decoration-[#0F6E66]/40 underline-offset-4 transition-colors hover:decoration-[#0F6E66]"
             >
               {CASUAL_CONTACT.linkLabel}

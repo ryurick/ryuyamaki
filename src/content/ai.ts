@@ -201,10 +201,9 @@ export const CONTACT = {
 
 export const CASUAL_CONTACT = {
   before: "通話はまだ早いなと感じたら、",
-  linkLabel: "メール",
-  after: "で質問だけでもどうぞ。",
-  email: "ryu8mk@gmail.com",
-  subject: "AI活用の相談",
+  linkLabel: "質問フォーム",
+  after: "からどうぞ。",
+  href: "https://forms.gle/YEAJwufDoiv9AfyN7",
 } as const;
 
 export const CONTRACT_NOTE = {
