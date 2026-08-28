@@ -79,6 +79,7 @@ export const WORKS: readonly Work[] = [
 export const CAREER = {
   main: "Software Engineer / 11 years",
   clients: "ANA / JAL / JCB / Profelier / Life Insurance",
+  tech: "Next.js / TypeScript / Go / PHP / Azure / Claude Code",
 } as const;
 
 export const MUSIC = {

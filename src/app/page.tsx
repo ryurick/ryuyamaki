@@ -127,6 +127,7 @@ export default function Home() {
                 <span>{CAREER.main}</span>
                 <span className={GRAY}>{CAREER.clients}</span>
               </p>
+              <p className={`mt-2 text-sm ${GRAY}`}>{CAREER.tech}</p>
             </Rise>
           </section>
 

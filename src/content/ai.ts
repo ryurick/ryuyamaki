@@ -159,8 +159,8 @@ export const CASES: readonly Case[] = [
 export type CareerPart = string | { label: string; href: string };
 
 export const CASES_EXTRA_FOOD = {
-  label: "対応できること（飲食店）",
-  title: "飲食店なら、たとえばこんなことができます",
+  label: "対応できること（店舗）",
+  title: "飲食店や美容室などの店舗なら、たとえばこんなことができます",
   comment:
     "シフト表の自動作成、紙のレシートや仕入伝票の読み取りと整理、予約フォームの導入、Googleマップの店舗情報と口コミ返信の整備、インスタ投稿の下書きづくりなど。",
 } as const;
@@ -190,7 +190,7 @@ export const CAREER = {
     "などを開発・設計してきました",
   ] satisfies readonly CareerPart[],
   fields: "ほかに大手生命保険会社 / 大手学習塾のシステムなど",
-  tech: "開発スタック: Next.js / TypeScript / Go / PHP / Azure など",
+  tech: "開発スタック: Next.js / TypeScript / Go / PHP / Azure / Claude Code など",
 } as const;
 
 export const CONTACT = {
