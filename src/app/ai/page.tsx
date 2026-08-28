@@ -333,11 +333,6 @@ export default function AiPage() {
 
         <section id="contact" className="py-12 text-center sm:py-16 md:py-20">
           <SectionTitle>{CONTACT.title}</SectionTitle>
-          <p
-            className={`mx-auto mt-5 max-w-[640px] text-[15px] leading-[1.9] sm:text-base ${GRAY}`}
-          >
-            {CONTACT.text}
-          </p>
           <a
             href={CONTACT_URL}
             target="_blank"

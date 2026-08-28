@@ -19,7 +19,7 @@ export const HERO = {
   cta: "無料30分診断を予約",
 } as const;
 
-export const SERVICES_LEAD = "たとえば、こんな困りごとです。";
+export const SERVICES_LEAD = "困りごと一覧";
 
 export const PAIN_CATEGORIES = [
   {
@@ -72,20 +72,19 @@ export const PAIN_CATEGORIES = [
 ] as const;
 
 export const SERVICES_NOTE =
-  "こうした作業は、AIや今あるツールをつないで減らせます。どこから手をつけるかは、無料診断で一緒に決めます。";
+  "こうした作業をAIやITの力で減らせます。（無料相談で一緒に決めていきましょう）";
 
 export const FLOW = [
   { title: "無料診断（30分）", note: "画面共有で現状を一緒に見ます" },
   { title: "構築", note: "下のメニューを目安に、診断のあとで決めます" },
-  { title: "引き渡し・保守", note: "保守は月1〜2万円。なくても大丈夫です" },
+  { title: "引き渡し・保守", note: "保守は月1万ほど（保守がない場合もございます）" },
 ] as const;
 
 export const PRICING = [
   {
     title: "小さな相談・設定",
-    example:
-      "ClaudeやChatGPTの使い方整備、インボイス・電子帳簿保存法対応の整理、既存ツールの設定",
-    price: "3〜5万円",
+    example: "AI導入支援、ClaudeやChatGPTの使い方講座、既存ツールの設定",
+    price: "1〜5万円",
   },
   {
     title: "ホームページ・ネットショップ制作",
@@ -93,7 +92,7 @@ export const PRICING = [
     price: "10万円〜",
   },
   {
-    title: "下書き・文章の自動化",
+    title: "記事・文章作成の自動化",
     example: "記事、SNS、商品説明、問い合わせ返信や見積書の雛形",
     price: "10万円〜",
   },
@@ -115,7 +114,7 @@ export const PRICING = [
 ] as const;
 
 export const PRICING_NOTE =
-  "金額はどれも目安です。無料診断のあとに見積もりを出します。";
+  "※金額はどれも目安です。無料診断のあとに見積もりを出します。";
 
 // noteのMakeShop MCP記事が公開されたらURLを入れる
 export const NOTE_MAKESHOP_ARTICLE_URL: string | null = null;
@@ -195,7 +194,6 @@ export const CAREER = {
 
 export const CONTACT = {
   title: "無料30分診断を予約",
-  text: "相談する内容が決まっていなくても大丈夫です。画面共有で普段の作業を見せてもらい、減らせそうなところをその場でお伝えします。",
   button: "予約する",
 } as const;
 
