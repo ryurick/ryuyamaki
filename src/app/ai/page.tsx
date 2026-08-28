@@ -141,12 +141,23 @@ export default function AiPage() {
             <p className={`mt-6 text-[15px] leading-[1.9] sm:text-base ${GRAY}`}>
               {HERO.sub}
             </p>
-            <a
-              href="#contact"
-              className="mt-8 inline-block rounded-md bg-[#0F6E66] px-7 py-3.5 font-medium text-white transition-colors hover:bg-[#0c5a54]"
-            >
-              {HERO.cta}
-            </a>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <a
+                href="#contact"
+                className="inline-block rounded-md bg-[#0F6E66] px-7 py-3.5 font-medium text-white transition-colors hover:bg-[#0c5a54]"
+              >
+                {HERO.cta}
+              </a>
+              <a
+                href={CASUAL_CONTACT.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-md border border-neutral-300 px-6 py-3.5 font-medium transition-colors hover:border-[#0F6E66] hover:text-[#0F6E66]"
+              >
+                {CASUAL_CONTACT.linkLabel}
+                <span aria-hidden className="text-[0.9em]">↗</span>
+              </a>
+            </div>
           </div>
           <div className="mx-auto w-full max-w-[320px] overflow-hidden rounded-2xl lg:max-w-none">
             <Image
