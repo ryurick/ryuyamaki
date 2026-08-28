@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
+  AI_CAN,
   CAREER,
   CASES,
   CASES_EXTRA,
@@ -206,6 +207,23 @@ export default function AiPage() {
           <p className={`mx-auto mt-7 max-w-[640px] text-center text-sm leading-[1.9] sm:text-[15px]`}>
             {SERVICES_NOTE}
           </p>
+        </section>
+
+        <section className="py-12 sm:py-16 md:py-20">
+          <SectionTitle>{AI_CAN.title}</SectionTitle>
+          <div className="mx-auto mt-10 grid max-w-[880px] gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {AI_CAN.items.map((item) => (
+              <div
+                key={item.verb}
+                className="rounded-xl border border-neutral-200 p-6 text-center"
+              >
+                <p className={`text-2xl font-bold ${TEAL}`}>{item.verb}</p>
+                <p className={`mt-3 text-sm leading-[1.8] ${GRAY}`}>
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
         </section>
 
         <section id="flow" className="py-12 sm:py-16 md:py-20">

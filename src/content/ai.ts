@@ -71,6 +71,16 @@ export const PAIN_CATEGORIES = [
   },
 ] as const;
 
+export const AI_CAN = {
+  title: "AIにできること",
+  items: [
+    { verb: "読む", text: "紙のレシートや書類を読み取って、表にする" },
+    { verb: "書く", text: "メール返信や商品説明の下書きを作る" },
+    { verb: "答える", text: "よくある質問への返事の案を用意する" },
+    { verb: "つなぐ", text: "ソフトからソフトへの転記を自動でやる" },
+  ],
+} as const;
+
 export const SERVICES_NOTE =
   "こうした作業をAIやITの力で減らせます。（無料相談で一緒に決めていきましょう）";
 
