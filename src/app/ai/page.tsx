@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   AI_CAN,
+  AI_CAN_MORE,
   CAREER,
   CASES,
   CASES_EXTRA,
@@ -233,6 +234,9 @@ export default function AiPage() {
               </div>
             ))}
           </div>
+          <p className={`mx-auto mt-7 max-w-[720px] text-center text-sm leading-[1.9] ${GRAY}`}>
+            {AI_CAN_MORE}
+          </p>
         </section>
 
         <section id="flow" className="py-12 sm:py-16 md:py-20">
