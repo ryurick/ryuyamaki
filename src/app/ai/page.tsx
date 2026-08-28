@@ -211,7 +211,7 @@ export default function AiPage() {
 
         <section id="pricing" className="py-12 sm:py-16 md:py-20">
           <SectionTitle>構築メニュー（目安）</SectionTitle>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {PRICING.map((item) => (
               <div
                 key={item.title}
