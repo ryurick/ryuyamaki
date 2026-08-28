@@ -5,7 +5,9 @@ import {
   CAREER,
   CASES,
   CASES_EXTRA,
+  CASES_EXTRA_FOOD,
   CONTACT,
+  CONTRACT_NOTE,
   CONTACT_URL,
   FLOW,
   HERO,
@@ -260,6 +262,17 @@ export default function AiPage() {
                 )}
               </div>
             ))}
+            <div className="rounded-xl border border-dashed border-neutral-300 p-6 sm:p-7">
+              <p className={`text-[13px] font-medium ${TEAL}`}>
+                {CASES_EXTRA_FOOD.label}
+              </p>
+              <h3 className="mt-3 font-bold leading-[1.7]">
+                {CASES_EXTRA_FOOD.title}
+              </h3>
+              <p className={`mt-3 text-sm leading-[1.9] ${GRAY}`}>
+                {CASES_EXTRA_FOOD.comment}
+              </p>
+            </div>
             <div className="rounded-xl border border-dashed border-neutral-300 p-6 sm:p-7 md:col-span-2">
               <p className={`text-[13px] font-medium ${TEAL}`}>
                 {CASES_EXTRA.label}
@@ -301,6 +314,9 @@ export default function AiPage() {
           <p className={`mt-6 text-sm tracking-[0.08em] ${GRAY}`}>
             {CAREER.fields}
           </p>
+          <p className={`mt-2 text-sm tracking-[0.02em] ${GRAY}`}>
+            {CAREER.tech}
+          </p>
         </section>
 
         <section id="contact" className="py-12 text-center sm:py-16 md:py-20">
@@ -318,6 +334,16 @@ export default function AiPage() {
           >
             {CONTACT.button}
           </a>
+          <p className={`mx-auto mt-10 max-w-[640px] text-sm leading-[1.9] ${GRAY}`}>
+            {CONTRACT_NOTE.before}
+            <a
+              href={`mailto:${CONTRACT_NOTE.email}`}
+              className="text-[#0F6E66] underline decoration-[#0F6E66]/40 underline-offset-4 transition-colors hover:decoration-[#0F6E66]"
+            >
+              {CONTRACT_NOTE.linkLabel}
+            </a>
+            {CONTRACT_NOTE.after}
+          </p>
         </section>
 
         <footer className="flex items-center justify-between border-t border-neutral-200 py-8 text-sm">

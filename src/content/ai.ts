@@ -158,6 +158,13 @@ export const CASES: readonly Case[] = [
 
 export type CareerPart = string | { label: string; href: string };
 
+export const CASES_EXTRA_FOOD = {
+  label: "対応できること（飲食店）",
+  title: "飲食店なら、たとえばこんなことができます",
+  comment:
+    "シフト表の自動作成、紙のレシートや仕入伝票の読み取りと整理、予約フォームの導入、Googleマップの店舗情報と口コミ返信の整備、インスタ投稿の下書きづくりなど。",
+} as const;
+
 export const CASES_EXTRA = {
   label: "対応できること",
   title: "このほかの細かい自動化も、ひと通り作れます",
@@ -183,10 +190,18 @@ export const CAREER = {
     "などを開発・設計してきました",
   ] satisfies readonly CareerPart[],
   fields: "ほかに大手生命保険会社 / 大手学習塾のシステムなど",
+  tech: "開発スタック: Next.js / TypeScript / Go / PHP / Azure など",
 } as const;
 
 export const CONTACT = {
   title: "無料30分診断を予約",
   text: "相談する内容が決まっていなくても大丈夫です。画面共有で普段の作業を見せてもらい、減らせそうなところをその場でお伝えします。",
   button: "予約する",
+} as const;
+
+export const CONTRACT_NOTE = {
+  before: "開発の業務委託（チームへの参画や受託開発）も受けています。こちらは",
+  linkLabel: "メール",
+  after: "でご相談ください。",
+  email: "ryu8mk@gmail.com",
 } as const;
