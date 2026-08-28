@@ -153,6 +153,13 @@ export const CASES: readonly Case[] = [
     comment: "記事を書く時間が短くなり、ほかの業務に時間を使えるようになりました。",
     links: [],
   },
+  {
+    label: "このサイト",
+    title: "このページも自分で設計して作っています",
+    comment:
+      "デザインから実装、文章までClaude（AI）と一緒に作りました。ホームページ制作の実例としてご覧ください。",
+    links: [{ label: "トップページを見る", href: "https://ryuyamaki.com/" }],
+  },
 ];
 
 export type CareerPart = string | { label: string; href: string };
