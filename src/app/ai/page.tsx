@@ -254,9 +254,11 @@ export default function AiPage() {
               >
                 <p className={`text-[13px] font-medium ${TEAL}`}>{c.label}</p>
                 <h3 className="mt-3 font-bold leading-[1.7]">{c.title}</h3>
-                <p className={`mt-3 text-sm leading-[1.9] ${GRAY}`}>
-                  {c.comment}
-                </p>
+                {c.comment && (
+                  <p className={`mt-3 text-sm leading-[1.9] ${GRAY}`}>
+                    {c.comment}
+                  </p>
+                )}
                 {c.links.length > 0 && (
                   <p className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
                     {c.links.map((link) => (

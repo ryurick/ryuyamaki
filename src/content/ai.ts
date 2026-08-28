@@ -155,9 +155,8 @@ export const CASES: readonly Case[] = [
   },
   {
     label: "このサイト",
-    title: "このページも自分で設計して作っています",
-    comment:
-      "デザインから実装まで自分で作っています。ホームページ制作の実例としてご覧ください。",
+    title: "ホームページ制作",
+    comment: "",
     links: [{ label: "トップページを見る", href: "https://ryuyamaki.com/" }],
   },
 ];
