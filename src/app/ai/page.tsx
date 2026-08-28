@@ -326,7 +326,7 @@ export default function AiPage() {
             href="/"
             className={`${GRAY} transition-colors hover:text-[#111]`}
           >
-            About
+            プロフィール
           </Link>
         </footer>
       </div>
