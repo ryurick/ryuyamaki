@@ -199,6 +199,14 @@ export const CONTACT = {
   button: "予約する",
 } as const;
 
+export const CASUAL_CONTACT = {
+  before: "通話はまだ早いなと感じたら、",
+  linkLabel: "メール",
+  after: "で質問だけでもどうぞ。",
+  email: "ryu8mk@gmail.com",
+  subject: "AI活用の相談",
+} as const;
+
 export const CONTRACT_NOTE = {
   before: "開発の業務委託（チームへの参画や受託開発）も受けています。こちらは",
   linkLabel: "メール",

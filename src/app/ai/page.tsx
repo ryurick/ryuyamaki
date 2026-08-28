@@ -6,6 +6,7 @@ import {
   CASES,
   CASES_EXTRA,
   CASES_EXTRA_FOOD,
+  CASUAL_CONTACT,
   CONTACT,
   CONTRACT_NOTE,
   CONTACT_URL,
@@ -334,6 +335,16 @@ export default function AiPage() {
           >
             {CONTACT.button}
           </a>
+          <p className={`mx-auto mt-6 max-w-[640px] text-sm leading-[1.9] ${GRAY}`}>
+            {CASUAL_CONTACT.before}
+            <a
+              href={`mailto:${CASUAL_CONTACT.email}?subject=${encodeURIComponent(CASUAL_CONTACT.subject)}`}
+              className="text-[#0F6E66] underline decoration-[#0F6E66]/40 underline-offset-4 transition-colors hover:decoration-[#0F6E66]"
+            >
+              {CASUAL_CONTACT.linkLabel}
+            </a>
+            {CASUAL_CONTACT.after}
+          </p>
           <p className={`mx-auto mt-10 max-w-[640px] text-sm leading-[1.9] ${GRAY}`}>
             {CONTRACT_NOTE.before}
             <a
