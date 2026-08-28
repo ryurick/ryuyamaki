@@ -211,15 +211,24 @@ export default function AiPage() {
 
         <section className="py-12 sm:py-16 md:py-20">
           <SectionTitle>{AI_CAN.title}</SectionTitle>
-          <div className="mx-auto mt-10 grid max-w-[880px] gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto mt-10 grid max-w-[880px] gap-5 sm:grid-cols-2">
             {AI_CAN.items.map((item) => (
               <div
-                key={item.verb}
-                className="rounded-xl border border-neutral-200 p-6 text-center"
+                key={item.scene}
+                className="rounded-xl border border-neutral-200 p-6 sm:p-7"
               >
-                <p className={`text-2xl font-bold ${TEAL}`}>{item.verb}</p>
+                <p className={`text-[13px] font-medium ${TEAL}`}>
+                  {item.scene}
+                </p>
                 <p className={`mt-3 text-sm leading-[1.8] ${GRAY}`}>
-                  {item.text}
+                  <span className="mr-2 text-[12px]">いま</span>
+                  {item.before}
+                </p>
+                <p className="mt-2 text-sm font-medium leading-[1.8]">
+                  <span className={`mr-2 text-[12px] font-bold ${TEAL}`}>
+                    これから
+                  </span>
+                  {item.after}
                 </p>
               </div>
             ))}

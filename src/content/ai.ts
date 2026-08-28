@@ -72,12 +72,28 @@ export const PAIN_CATEGORIES = [
 ] as const;
 
 export const AI_CAN = {
-  title: "AIにできること",
+  title: "AIを入れると、こう変わります",
   items: [
-    { verb: "読む", text: "紙のレシートや書類を読み取って、表にする" },
-    { verb: "書く", text: "メール返信や商品説明の下書きを作る" },
-    { verb: "答える", text: "よくある質問への返事の案を用意する" },
-    { verb: "つなぐ", text: "ソフトからソフトへの転記を自動でやる" },
+    {
+      scene: "領収書の整理",
+      before: "月末に、領収書の束を1枚ずつ会計ソフトに入力",
+      after: "スマホで撮ると表になり、会計ソフトに入る",
+    },
+    {
+      scene: "問い合わせ返信",
+      before: "同じ質問に、毎回イチから返事を書く",
+      after: "下書きができていて、確認して送るだけ",
+    },
+    {
+      scene: "売上の集計",
+      before: "CSVを出して、Excelで1時間",
+      after: "「先月の売れ筋は？」と聞くと表とグラフが出る",
+    },
+    {
+      scene: "受注の転記",
+      before: "注文をExcelの台帳に手で写す",
+      after: "注文が入ると、自動で台帳に追加される",
+    },
   ],
 } as const;
 
