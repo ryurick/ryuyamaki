@@ -12,5 +12,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: "https://ryuyamaki.com/ai/shindan",
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
   ];
 }

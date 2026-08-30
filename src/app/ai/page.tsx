@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Shindan } from "@/components/ai/Shindan";
 import {
   AI_CAN,
   AI_CAN_MORE,
@@ -146,20 +145,17 @@ export default function AiPage() {
               {HERO.sub}
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a
-                href="#contact"
+              <Link
+                href="/ai/shindan"
                 className="inline-block rounded-md bg-[#0F6E66] px-7 py-3.5 font-medium text-white transition-colors hover:bg-[#0c5a54]"
               >
-                {HERO.cta}
-              </a>
+                {SHINDAN.heroCta}
+              </Link>
               <a
-                href={CASUAL_CONTACT.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-md border border-neutral-300 px-6 py-3.5 font-medium transition-colors hover:border-[#0F6E66] hover:text-[#0F6E66]"
+                href="#contact"
+                className="inline-block rounded-md border border-neutral-300 px-6 py-3.5 font-medium transition-colors hover:border-[#0F6E66] hover:text-[#0F6E66]"
               >
-                {CASUAL_CONTACT.linkLabel}
-                <span aria-hidden className="text-[0.9em]">↗</span>
+                {HERO.cta}
               </a>
             </div>
           </div>
@@ -246,7 +242,14 @@ export default function AiPage() {
           <p className={`mx-auto mt-5 max-w-[640px] text-center text-sm leading-[1.9] sm:text-[15px] ${GRAY}`}>
             {SHINDAN.lead}
           </p>
-          <Shindan />
+          <p className="mt-8 text-center">
+            <Link
+              href="/ai/shindan"
+              className="inline-block rounded-md bg-[#0F6E66] px-10 py-3.5 font-medium text-white transition-colors hover:bg-[#0c5a54]"
+            >
+              {SHINDAN.start}
+            </Link>
+          </p>
         </section>
 
         <section id="flow" className="py-12 sm:py-16 md:py-20">

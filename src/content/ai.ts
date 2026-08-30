@@ -120,9 +120,12 @@ export const AI_CAN = {
 
 export const SHINDAN = {
   title: "かんたん診断",
-  lead: "選ぶだけで30秒。減らせそうな作業と、費用の目安が分かります。",
+  lead: "質問に答えるだけ・所要時間 約1分。減らせそうな作業と、費用の目安が分かります。",
+  start: "診断をはじめる",
+  heroCta: "とりあえず診断してみる",
+  speaker: "八巻",
   q1: {
-    question: "お仕事の形は？",
+    bubble: "こんにちは、八巻です。まず、お仕事の形を教えてください",
     options: [
       { key: "tenpo", label: "店舗（飲食・美容・小売など）" },
       { key: "ec", label: "ネットショップ" },
@@ -130,8 +133,17 @@ export const SHINDAN = {
       { key: "sonota", label: "その他の会社・個人事業" },
     ],
   },
+  qSize: {
+    bubble: "何人くらいでやっていますか？",
+    options: [
+      { key: "hitori", label: "1人でやっている" },
+      { key: "small", label: "2〜5人" },
+      { key: "mid", label: "6〜30人" },
+      { key: "big", label: "30人以上" },
+    ],
+  },
   q2: {
-    question: "時間を取られている作業は？（いくつでも）",
+    bubble: "時間を取られている作業はどれですか？いくつでも選んでください",
     options: [
       { key: "keiri", label: "領収書・レシートの整理" },
       { key: "seikyu", label: "請求書・見積書づくり" },
@@ -143,19 +155,46 @@ export const SHINDAN = {
       { key: "hp", label: "ホームページを作りたい・直したい" },
     ],
   },
+  qMain: {
+    bubble: "その中で、一番減らしたいのはどれですか？",
+  },
+  qIt: {
+    bubble: "パソコンやITは得意ですか？正直なところで大丈夫です",
+    options: [
+      { key: "nigate", label: "苦手" },
+      { key: "futsu", label: "ふつう" },
+      { key: "tokui", label: "得意" },
+    ],
+  },
   q3: {
-    question: "ChatGPTやClaudeを使ったことは？",
+    bubble: "ChatGPTやClaudeを使ったことはありますか？",
     options: [
       { key: "nai", label: "ほとんどない" },
       { key: "sukoshi", label: "少し使ったことがある" },
       { key: "shigoto", label: "仕事で使っている" },
     ],
   },
+  resultBubble: "ありがとうございます。あなたの場合をまとめました",
+  mainLabel: "一番効きそうなところ",
+  othersLabel: "そのほかの候補",
   intro: {
     nai: "まずは使い方講座つきの小さな相談（1〜5万円）から始めるのが合いそうです。",
     sukoshi: "よく発生する作業を1つ選んで、自動化するところから始めるのが合いそうです。",
     shigoto: "業務の流れへの組み込みを、一緒に設計していけそうです。",
   } as Record<string, string>,
+  itNote: {
+    nigate: "仕組みは私が作り、渡すときには難しい操作が残らない形にします。",
+    futsu: "",
+    tokui: "",
+  } as Record<string, string>,
+  sizeNote: {
+    hitori: "",
+    small: "",
+    mid: "複数人で使う前提で、共有しやすい形にします。",
+    big: "複数人で使う前提で、共有しやすい形にします。",
+  } as Record<string, string>,
+  selfDemo:
+    "この診断ページ自体も「業務に合わせた小さなツール」の実例です。",
   changes: {
     keiri: {
       change: "レシートをスマホで撮ると表になり、会計ソフトに入ります",
