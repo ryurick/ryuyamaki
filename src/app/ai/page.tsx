@@ -109,6 +109,12 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 export default function AiPage() {
   return (
     <div className="w-full flex-1 bg-white text-[#111]">
+      <a
+        href="#pricing"
+        className="block bg-[#0F6E66] px-4 py-2.5 text-center text-[13px] font-medium text-white transition-colors hover:bg-[#0c5a54]"
+      >
+        {MONITOR.banner}
+      </a>
       <div className="mx-auto w-full max-w-5xl px-6">
         <header className="flex items-center justify-between gap-4 py-6">
           <Link href="/" className="text-lg font-bold tracking-tight">
