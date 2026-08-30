@@ -227,7 +227,7 @@ export default function AiPage() {
                 <p className={`text-[13px] font-medium ${TEAL}`}>
                   {item.scene}
                 </p>
-                <p className={`mt-3 text-sm leading-[1.8] ${GRAY}`}>
+                <p className={`mt-3 text-center text-sm leading-[1.8] ${GRAY}`}>
                   {item.before}
                 </p>
                 <p
