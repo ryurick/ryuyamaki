@@ -14,6 +14,7 @@ import {
   CONTACT_URL,
   FLOW,
   HERO,
+  MONITOR,
   NAV,
   PAIN_CATEGORIES,
   PRICING,
@@ -286,6 +287,12 @@ export default function AiPage() {
             ))}
           </div>
           <p className={`mt-7 text-center text-sm ${GRAY}`}>{PRICING_NOTE}</p>
+          <div className="mx-auto mt-8 max-w-[720px] rounded-2xl border border-[#0F6E66]/40 bg-[#0F6E66]/5 p-6 text-center sm:p-7">
+            <p className={`text-[13px] font-bold ${TEAL}`}>{MONITOR.label}</p>
+            <p className="mt-2 text-sm leading-[1.9] sm:text-[15px]">
+              {MONITOR.text}
+            </p>
+          </div>
         </section>
 
         <section id="cases" className="py-12 sm:py-16 md:py-20">

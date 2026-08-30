@@ -290,6 +290,11 @@ export const PRICING = [
 export const PRICING_NOTE =
   "※金額はどれも目安です。無料診断のあとに見積もりを出します。";
 
+export const MONITOR = {
+  label: "モニター募集（先着2社）",
+  text: "業種を事例として掲載してよい方・感想を一言いただける方は、構築費を半額にします。枠が埋まり次第終了します。",
+} as const;
+
 // noteのMakeShop MCP記事が公開されたらURLを入れる
 export const NOTE_MAKESHOP_ARTICLE_URL: string | null = null;
 
