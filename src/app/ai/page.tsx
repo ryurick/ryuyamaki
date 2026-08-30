@@ -228,13 +228,15 @@ export default function AiPage() {
                   {item.scene}
                 </p>
                 <p className={`mt-3 text-sm leading-[1.8] ${GRAY}`}>
-                  <span className="mr-2 text-[12px]">いま</span>
                   {item.before}
                 </p>
-                <p className="mt-2 text-sm font-medium leading-[1.8]">
-                  <span className={`mr-2 text-[12px] font-bold ${TEAL}`}>
-                    これから
-                  </span>
+                <p
+                  aria-hidden
+                  className={`my-1.5 text-center text-lg leading-none ${TEAL}`}
+                >
+                  ↓
+                </p>
+                <p className="rounded-lg bg-[#0F6E66]/5 px-4 py-3 text-sm font-medium leading-[1.8]">
                   {item.after}
                 </p>
               </div>
