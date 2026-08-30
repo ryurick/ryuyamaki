@@ -124,9 +124,9 @@ export const SHINDAN = {
   lead: "質問に答えるだけ・所要時間 約1分。減らせそうな作業と、費用の目安が分かります。",
   start: "診断をはじめる",
   heroCta: "とりあえず診断してみる",
-  speaker: "八巻",
+  speaker: "Ryu",
   q1: {
-    bubble: "こんにちは、八巻です。まず、お仕事の形を教えてください",
+    bubble: "こんにちは、Ryuです。まず、お仕事の形を教えてください",
     options: [
       { key: "tenpo", label: "店舗（飲食・美容・小売など）" },
       { key: "ec", label: "ネットショップ" },
