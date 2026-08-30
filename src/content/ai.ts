@@ -6,6 +6,7 @@ export const CONTACT_URL =
 
 export const NAV = [
   { label: "サービス", href: "#service" },
+  { label: "診断", href: "#shindan" },
   { label: "進め方", href: "#flow" },
   { label: "料金", href: "#pricing" },
   { label: "事例", href: "#cases" },
@@ -115,6 +116,91 @@ export const AI_CAN = {
       after: "「営業時間を変えて」と伝えた当日に変わる",
     },
   ],
+} as const;
+
+export const SHINDAN = {
+  title: "かんたん診断",
+  lead: "選ぶだけで30秒。減らせそうな作業と、費用の目安が分かります。",
+  q1: {
+    question: "お仕事の形は？",
+    options: [
+      { key: "tenpo", label: "店舗（飲食・美容・小売など）" },
+      { key: "ec", label: "ネットショップ" },
+      { key: "jimusho", label: "事務所・士業" },
+      { key: "sonota", label: "その他の会社・個人事業" },
+    ],
+  },
+  q2: {
+    question: "時間を取られている作業は？（いくつでも）",
+    options: [
+      { key: "keiri", label: "領収書・レシートの整理" },
+      { key: "seikyu", label: "請求書・見積書づくり" },
+      { key: "reply", label: "問い合わせ・メールの返信" },
+      { key: "sns", label: "記事・SNS・商品説明" },
+      { key: "shift", label: "シフト表・勤怠" },
+      { key: "syukei", label: "売上や数字の集計" },
+      { key: "tenki", label: "注文・顧客データの転記" },
+      { key: "hp", label: "ホームページを作りたい・直したい" },
+    ],
+  },
+  q3: {
+    question: "ChatGPTやClaudeを使ったことは？",
+    options: [
+      { key: "nai", label: "ほとんどない" },
+      { key: "sukoshi", label: "少し使ったことがある" },
+      { key: "shigoto", label: "仕事で使っている" },
+    ],
+  },
+  intro: {
+    nai: "まずは使い方講座つきの小さな相談（1〜5万円）から始めるのが合いそうです。",
+    sukoshi: "よく発生する作業を1つ選んで、自動化するところから始めるのが合いそうです。",
+    shigoto: "業務の流れへの組み込みを、一緒に設計していけそうです。",
+  } as Record<string, string>,
+  changes: {
+    keiri: {
+      change: "レシートをスマホで撮ると表になり、会計ソフトに入ります",
+      menu: "入力・転記の自動化（10〜15万円）",
+    },
+    seikyu: {
+      change: "一覧やメモから、請求書・見積書の下書きがまとめてできます",
+      menu: "入力・転記の自動化（10〜15万円）",
+    },
+    reply: {
+      change: "返信の下書きができていて、確認して送るだけになります",
+      menu: "記事・文章作成の自動化（10万円〜）",
+    },
+    sns: {
+      change: "記事やSNS、商品説明の下書きが出てくるので、直して出すだけになります",
+      menu: "記事・文章作成の自動化（10万円〜）",
+    },
+    shift: {
+      change: "希望を集めると、シフト表の下案が出ます",
+      menu: "業務に合わせた小さなツール（15〜20万円）",
+    },
+    syukei: {
+      change: "「先月の売れ筋は？」と聞くと、表とグラフが出ます",
+      menu: "小さな相談・設定（1〜5万円）",
+    },
+    tenki: {
+      change: "注文や顧客データが、自動で台帳につながります",
+      menu: "入力・転記の自動化（10〜15万円）",
+    },
+    hp: {
+      change: "紹介サイトやネットショップを、更新しやすい形で作れます",
+      menu: "ホームページ・ネットショップ制作（10万円前後）",
+    },
+  } as Record<string, { change: string; menu: string }>,
+  bizExtra: {
+    tenpo: "店舗なら、Googleマップの口コミ返信や予約フォームも相性が良いです。",
+    ec: "ネットショップなら、商品登録や価格の一括変更も相性が良いです。",
+    jimusho: "事務所なら、書類のチェックや専門記事の下書きも相性が良いです。",
+    sonota: "",
+  } as Record<string, string>,
+  resultTitle: "あなたの場合、こう変わりそうです",
+  menuTitle: "費用の目安",
+  retry: "やり直す",
+  next: "次へ",
+  back: "戻る",
 } as const;
 
 export const AI_CAN_MORE =

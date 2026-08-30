@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { Shindan } from "@/components/ai/Shindan";
 import {
   AI_CAN,
   AI_CAN_MORE,
@@ -20,6 +21,7 @@ import {
   PRICING_NOTE,
   SERVICES_LEAD,
   SERVICES_NOTE,
+  SHINDAN,
 } from "@/content/ai";
 
 export const metadata: Metadata = {
@@ -237,6 +239,14 @@ export default function AiPage() {
           <p className={`mx-auto mt-7 max-w-[720px] text-center text-sm leading-[1.9] ${GRAY}`}>
             {AI_CAN_MORE}
           </p>
+        </section>
+
+        <section id="shindan" className="py-12 sm:py-16 md:py-20">
+          <SectionTitle>{SHINDAN.title}</SectionTitle>
+          <p className={`mx-auto mt-5 max-w-[640px] text-center text-sm leading-[1.9] sm:text-[15px] ${GRAY}`}>
+            {SHINDAN.lead}
+          </p>
+          <Shindan />
         </section>
 
         <section id="flow" className="py-12 sm:py-16 md:py-20">
