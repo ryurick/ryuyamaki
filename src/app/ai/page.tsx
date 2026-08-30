@@ -22,6 +22,7 @@ import {
   SERVICES_LEAD,
   SERVICES_NOTE,
   SHINDAN,
+  WHY_ME,
 } from "@/content/ai";
 
 export const metadata: Metadata = {
@@ -275,6 +276,23 @@ export default function AiPage() {
               </li>
             ))}
           </ol>
+        </section>
+
+        <section className="py-12 sm:py-16 md:py-20">
+          <SectionTitle>{WHY_ME.title}</SectionTitle>
+          <div className="mx-auto mt-10 grid max-w-[880px] gap-5 md:grid-cols-3">
+            {WHY_ME.items.map((item) => (
+              <div
+                key={item.head}
+                className="rounded-xl border border-neutral-200 p-6 sm:p-7"
+              >
+                <h3 className="font-bold leading-[1.7]">{item.head}</h3>
+                <p className={`mt-3 text-sm leading-[1.9] ${GRAY}`}>
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
         </section>
 
         <section id="pricing" className="py-12 sm:py-16 md:py-20">
