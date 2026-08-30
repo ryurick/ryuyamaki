@@ -143,10 +143,11 @@ export default function AiPage() {
 
         <section className="grid items-center gap-10 py-12 sm:py-16 lg:grid-cols-[1.2fr_1fr] lg:gap-14 lg:py-20">
           <div>
-            <h1 className="text-[26px] font-bold leading-[1.5] tracking-tight sm:text-3xl">
-              {HERO.title[0]}
-              <br />
-              {HERO.title[1]}
+            <p className={`text-sm font-bold sm:text-[15px] ${TEAL}`}>
+              {HERO.eyebrow}
+            </p>
+            <h1 className="mt-3 text-[26px] font-bold leading-[1.5] tracking-tight sm:text-3xl">
+              {HERO.title}
             </h1>
             <p className={`mt-6 text-[15px] leading-[1.9] sm:text-base ${GRAY}`}>
               {HERO.sub}
