@@ -102,9 +102,9 @@ export const AI_CAN = {
       after: "下書きができていて、確認して送るだけ",
     },
     {
-      scene: "売上の集計",
+      scene: "売上の集計・分析",
       before: "CSVを出して、Excelで1時間",
-      after: "「先月の売れ筋は？」と聞くと表とグラフが出る",
+      after: "「先月の売れ筋は？」と聞くと表とグラフが出て、伸び悩みの原因や次の打ち手まで分析できる",
     },
     {
       scene: "商品ページの下書き",
@@ -151,7 +151,7 @@ export const SHINDAN = {
       { key: "reply", label: "問い合わせ・メールの返信" },
       { key: "sns", label: "記事・SNS・商品説明" },
       { key: "shift", label: "シフト表・勤怠" },
-      { key: "syukei", label: "売上や数字の集計" },
+      { key: "syukei", label: "売上や数字の集計・分析" },
       { key: "tenki", label: "注文・顧客データの転記" },
       { key: "hp", label: "ホームページを作りたい・直したい" },
     ],
@@ -218,7 +218,8 @@ export const SHINDAN = {
       menu: "業務に合わせた小さなツール（15〜20万円）",
     },
     syukei: {
-      change: "「先月の売れ筋は？」と聞くと、表とグラフが出ます",
+      change:
+        "「先月の売れ筋は？」と聞くと表とグラフが出て、伸び悩みの原因や次の打ち手まで分析できます",
       menu: "小さな相談・設定（1〜5万円）",
     },
     tenki: {
