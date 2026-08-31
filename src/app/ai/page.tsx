@@ -112,7 +112,7 @@ export default function AiPage() {
     <div className="w-full flex-1 bg-white text-[#111]">
       <a
         href="#pricing"
-        className="block bg-[#0F6E66] px-4 py-2.5 text-center text-[13px] font-medium text-white transition-colors hover:bg-[#0c5a54]"
+        className="block bg-[#0F6E66] px-4 py-2.5 text-center text-[13px] font-medium text-white shadow-[0_1px_2px_rgba(16,24,40,0.12)] transition-colors hover:bg-[#0c5a54] active:translate-y-px focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F6E66]"
       >
         {MONITOR.banner}
       </a>
@@ -135,7 +135,7 @@ export default function AiPage() {
             </nav>
             <a
               href="#contact"
-              className="rounded-md bg-[#0F6E66] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#0c5a54]"
+              className="rounded-md bg-[#0F6E66] px-4 py-2 text-sm font-medium text-white shadow-[0_1px_2px_rgba(16,24,40,0.12)] transition-colors hover:bg-[#0c5a54] active:translate-y-px focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F6E66]"
             >
               無料30分診断
             </a>
@@ -156,7 +156,7 @@ export default function AiPage() {
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link
                 href="/ai/shindan"
-                className="inline-block rounded-md bg-[#0F6E66] px-7 py-3.5 font-medium text-white transition-colors hover:bg-[#0c5a54]"
+                className="inline-block rounded-md bg-[#0F6E66] px-7 py-3.5 font-medium text-white shadow-[0_1px_2px_rgba(16,24,40,0.12)] transition-colors hover:bg-[#0c5a54] active:translate-y-px focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F6E66]"
               >
                 {SHINDAN.heroCta}
               </Link>
@@ -190,7 +190,7 @@ export default function AiPage() {
             {PAIN_CATEGORIES.map((category) => (
               <div
                 key={category.title}
-                className="rounded-xl border border-neutral-200 p-6 sm:p-7"
+                className="rounded-xl border border-neutral-200 bg-white p-6 shadow-[0_1px_2px_rgba(16,24,40,0.04)] transition-shadow duration-300 hover:shadow-[0_6px_16px_rgba(16,24,40,0.07)] sm:p-7"
               >
                 <div className="flex items-center gap-3">
                   <ServiceIcon name={category.icon} />
@@ -223,7 +223,7 @@ export default function AiPage() {
             {AI_CAN.items.map((item) => (
               <div
                 key={item.scene}
-                className="rounded-xl border border-neutral-200 p-6 sm:p-7"
+                className="rounded-xl border border-neutral-200 bg-white p-6 shadow-[0_1px_2px_rgba(16,24,40,0.04)] transition-shadow duration-300 hover:shadow-[0_6px_16px_rgba(16,24,40,0.07)] sm:p-7"
               >
                 <p className={`text-[13px] font-medium ${TEAL}`}>
                   {item.scene}
@@ -256,7 +256,7 @@ export default function AiPage() {
           <p className="mt-8 text-center">
             <Link
               href="/ai/shindan"
-              className="inline-block rounded-md bg-[#0F6E66] px-10 py-3.5 font-medium text-white transition-colors hover:bg-[#0c5a54]"
+              className="inline-block rounded-md bg-[#0F6E66] px-10 py-3.5 font-medium text-white shadow-[0_1px_2px_rgba(16,24,40,0.12)] transition-colors hover:bg-[#0c5a54] active:translate-y-px focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F6E66]"
             >
               {SHINDAN.start}
             </Link>
@@ -284,7 +284,7 @@ export default function AiPage() {
             {WHY_ME.items.map((item) => (
               <div
                 key={item.head}
-                className="rounded-xl border border-neutral-200 p-6 sm:p-7"
+                className="rounded-xl border border-neutral-200 bg-white p-6 shadow-[0_1px_2px_rgba(16,24,40,0.04)] transition-shadow duration-300 hover:shadow-[0_6px_16px_rgba(16,24,40,0.07)] sm:p-7"
               >
                 <h3 className="font-bold leading-[1.7]">{item.head}</h3>
                 <p className={`mt-3 text-sm leading-[1.9] ${GRAY}`}>
@@ -301,7 +301,7 @@ export default function AiPage() {
             {PRICING.map((item) => (
               <div
                 key={item.title}
-                className="flex flex-col rounded-xl border border-neutral-200 p-6"
+                className="flex flex-col rounded-xl border border-neutral-200 bg-white p-6 shadow-[0_1px_2px_rgba(16,24,40,0.04)] transition-shadow duration-300 hover:shadow-[0_6px_16px_rgba(16,24,40,0.07)]"
               >
                 <h3 className="font-bold leading-[1.7]">{item.title}</h3>
                 <p className={`mt-3 text-[13px] leading-[1.8] ${GRAY}`}>
@@ -328,7 +328,7 @@ export default function AiPage() {
             {CASES.map((c) => (
               <div
                 key={c.label}
-                className="rounded-xl border border-neutral-200 p-6 sm:p-7"
+                className="rounded-xl border border-neutral-200 bg-white p-6 shadow-[0_1px_2px_rgba(16,24,40,0.04)] transition-shadow duration-300 hover:shadow-[0_6px_16px_rgba(16,24,40,0.07)] sm:p-7"
               >
                 <p className={`text-[13px] font-medium ${TEAL}`}>{c.label}</p>
                 <h3 className="mt-3 font-bold leading-[1.7]">{c.title}</h3>
@@ -417,7 +417,7 @@ export default function AiPage() {
             href={CONTACT_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-block rounded-md bg-[#0F6E66] px-12 py-3.5 font-medium text-white transition-colors hover:bg-[#0c5a54]"
+            className="mt-8 inline-block rounded-md bg-[#0F6E66] px-12 py-3.5 font-medium text-white shadow-[0_1px_2px_rgba(16,24,40,0.12)] transition-colors hover:bg-[#0c5a54] active:translate-y-px focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F6E66]"
           >
             {CONTACT.button}
           </a>

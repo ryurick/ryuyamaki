@@ -31,9 +31,16 @@ AIエージェント向けのデザインシステム文書。このサイトの
 - セクションラベル(トップ): `text-[11px] tracking-[0.32em] text-neutral-400` 英大文字
 - 本文サイズ: `text-sm`〜`text-[15px]`、行間 `leading-[1.8]`〜`[1.9]`
 
+## 状態と質感（elevation）
+
+- カードの影: 通常 `shadow-[0_1px_2px_rgba(16,24,40,0.04)]` → ホバー `shadow-[0_6px_16px_rgba(16,24,40,0.07)]`（`transition-shadow duration-300`）
+- 主ボタン: `shadow-[0_1px_2px_rgba(16,24,40,0.12)]`＋押下 `active:translate-y-px`
+- フォーカス: すべての操作要素に `focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F6E66]`
+- 破線カード（できること系）とダークパネルには影をつけない
+
 ## コンポーネントの型
 
-- カード: `rounded-xl border border-neutral-200 p-6 sm:p-7`
+- カード: `rounded-xl border border-neutral-200 bg-white p-6 sm:p-7`＋上記の影
 - 大カード・パネル: `rounded-2xl`〜`rounded-3xl`
 - 主ボタン: `rounded-md bg-[#0F6E66] px-7 py-3.5 font-medium text-white hover:bg-[#0c5a54]`
 - 副ボタン: 同形で `border border-neutral-300` アウトライン、ホバーでティール

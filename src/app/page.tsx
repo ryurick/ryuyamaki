@@ -193,7 +193,7 @@ export default function Home() {
                           <p className="mt-4 flex flex-wrap gap-2.5">
                             {work.links.map((link) => {
                               const pill =
-                                "inline-flex items-center gap-1.5 rounded-full border border-neutral-300 px-4 py-1.5 text-[13px] text-[#111] transition-colors hover:border-[#0F6E66] hover:text-[#0F6E66]";
+                                "inline-flex items-center gap-1.5 rounded-full border border-neutral-300 px-4 py-1.5 text-[13px] text-[#111] transition-colors hover:border-[#0F6E66] hover:bg-[#0F6E66]/5 hover:text-[#0F6E66] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F6E66]";
                               return link.external ? (
                                 <a
                                   key={link.href}

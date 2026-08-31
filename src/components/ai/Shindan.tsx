@@ -45,10 +45,10 @@ function OptionRow({
     <button
       type="button"
       onClick={onClick}
-      className={`flex w-full items-center gap-3 rounded-xl border px-5 py-4 text-left text-[15px] transition-colors ${
+      className={`flex w-full items-center gap-3 rounded-xl border px-5 py-4 text-left text-[15px] shadow-[0_1px_2px_rgba(16,24,40,0.03)] transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F6E66] ${
         selected
           ? "border-[#0F6E66] bg-[#0F6E66]/5"
-          : "border-neutral-200 bg-white hover:border-[#0F6E66]/50"
+          : "border-neutral-200 bg-white hover:border-[#0F6E66]/50 hover:shadow-[0_4px_10px_rgba(16,24,40,0.06)]"
       }`}
     >
       <span
@@ -304,7 +304,7 @@ export function Shindan() {
               href={CONTACT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-md bg-[#0F6E66] px-7 py-3.5 font-medium text-white transition-colors hover:bg-[#0c5a54]"
+              className="inline-block rounded-md bg-[#0F6E66] px-7 py-3.5 font-medium text-white shadow-[0_1px_2px_rgba(16,24,40,0.12)] transition-colors hover:bg-[#0c5a54] active:translate-y-px focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F6E66]"
             >
               無料30分診断を予約
             </a>
@@ -364,7 +364,7 @@ export function Shindan() {
               type="button"
               disabled={works.length === 0}
               onClick={next}
-              className="rounded-md bg-[#0F6E66] px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-[#0c5a54] disabled:cursor-not-allowed disabled:bg-neutral-300"
+              className="rounded-md bg-[#0F6E66] px-8 py-3 text-sm font-medium text-white shadow-[0_1px_2px_rgba(16,24,40,0.12)] transition-colors hover:bg-[#0c5a54] active:translate-y-px focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F6E66] disabled:cursor-not-allowed disabled:bg-neutral-300"
             >
               {SHINDAN.next} →
             </button>
