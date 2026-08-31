@@ -1,3 +1,5 @@
+UI・文章を追加・変更するときは、必ず先に `DESIGN.md` を読むこと。
+
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
