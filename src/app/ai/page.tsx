@@ -28,7 +28,7 @@ import {
 export const metadata: Metadata = {
   title: "中小会社・個人事業主のAI/IT活用支援",
   description:
-    "小さな会社や個人事業主の面倒な作業をAIで減らします。まず30分の無料診断から。",
+    "中小企業・個人事業主の面倒な作業をAIで減らします。まず30分の無料診断から。",
   robots: {
     index: true,
     follow: true,
