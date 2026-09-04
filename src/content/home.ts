@@ -59,6 +59,18 @@ export const WORKS: readonly Work[] = [
     ],
   },
   {
+    title: "AI天職占い",
+    description:
+      "生年月日から四柱推命の命式を天文計算で算出し、AI時代に合う働き方を鑑定するサービス",
+    links: [
+      {
+        label: "サイトを見る",
+        href: "https://tenshokuuranai.com/",
+        external: true,
+      },
+    ],
+  },
+  {
     title: "Helen's Match",
     description: "Instagramフォロワー2万人のペット用品ブランドの、犬に合うクッションを選ぶ診断ツール",
     links: [
